@@ -18,7 +18,7 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var weatherImage: NSImageView!
     @IBOutlet weak var weatherConditionLabel: NSTextField!
     @IBOutlet weak var collectionView: NSCollectionView!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     //Variables
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let menu = NSMenu()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -37,6 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popoverView.contentViewController = vc
         popoverView.behavior = .transient
         popoverView.show(relativeTo: statusItem.button!.bounds, of: statusItem.button!, preferredEdge: .minY)
+        
     }
 
 

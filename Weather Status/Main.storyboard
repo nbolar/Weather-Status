@@ -685,11 +685,11 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherVC" id="XfG-lQ-9wD" customClass="WeatherVC" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="454" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="375"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="71" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-G2-yfC">
-                                <rect key="frame" x="20" y="159" width="414" height="171"/>
+                                <rect key="frame" x="20" y="184" width="360" height="171"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-u9-0ij">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="171"/>
@@ -731,10 +731,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="30" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yx0-8o-Daq">
-                                        <rect key="frame" x="212" y="5" width="202" height="162"/>
+                                        <rect key="frame" x="212" y="5" width="148" height="162"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DST-cD-8hV">
-                                                <rect key="frame" x="48" y="55" width="107" height="107"/>
+                                                <rect key="frame" x="21" y="55" width="107" height="107"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="107" id="Eey-6u-Dr4"/>
                                                     <constraint firstAttribute="height" constant="107" id="rTG-JL-v1r"/>
@@ -742,7 +742,7 @@
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Clear" id="oim-Nx-ai8"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Ee-pRo">
-                                                <rect key="frame" x="81" y="0.0" width="41" height="25"/>
+                                                <rect key="frame" x="54" y="0.0" width="41" height="25"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Clear" drawsBackground="YES" id="HgZ-GJ-BKD">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -773,13 +773,13 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-D8-kak">
-                                <rect key="frame" x="20" y="-11" width="414" height="150"/>
+                                <rect key="frame" x="20" y="14" width="360" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="90t-2e-uw0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="c56-Lo-BTP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                             <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="Bld-IW-vQA">
                                                 <size key="itemSize" width="125" height="125"/>
@@ -793,7 +793,7 @@
                                     <constraint firstAttribute="height" constant="150" id="ZKN-fD-oIm"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="g8R-TD-Fw1">
-                                    <rect key="frame" x="0.0" y="134" width="412" height="16"/>
+                                    <rect key="frame" x="0.0" y="134" width="360" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="NH6-75-DhK">
@@ -801,14 +801,31 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-71-ySa">
+                                <rect key="frame" x="375" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1t6-FQ-y8D"/>
+                                    <constraint firstAttribute="width" constant="20" id="M3I-Sy-nSO"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-info-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="o4d-qh-rFH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="CcI-zZ-HkC" kind="popover" popoverAnchorView="ccQ-71-ySa" popoverBehavior="t" preferredEdge="maxX" id="zWD-El-11t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
+                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" constant="5" id="gos-bH-R1y"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pdX-G3-CzB"/>
+                            <constraint firstAttribute="bottom" secondItem="ccQ-71-ySa" secondAttribute="bottom" constant="5" id="tUl-62-hg0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -824,8 +841,42 @@
             </objects>
             <point key="canvasLocation" x="74" y="437"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="D36-4w-6bK">
+            <objects>
+                <viewController id="CcI-zZ-HkC" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-Hu-fJv">
+                                <rect key="frame" x="24" y="20" width="160" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Powered by Dark Sky [https://darksky.net/poweredby/]" id="l5S-tQ-H7T">
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEs-n7-hVS">
+                                <rect key="frame" x="16" y="101" width="176" height="79"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Icons made by Freepik from www.flaticon.com" id="IKo-40-Mg4">
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="fGZ-ru-T8Q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="392"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Clear" width="107" height="107"/>
+        <image name="icons8-info-100" width="75" height="75"/>
     </resources>
 </document>
