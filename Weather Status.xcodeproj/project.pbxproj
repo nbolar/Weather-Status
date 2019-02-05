@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E71B17E220993D400236C2F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E71B17D220993D400236C2F /* Alamofire.framework */; };
+		4E165FF922099808002DEBB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E165FF822099808002DEBB4 /* Alamofire.framework */; };
+		4E165FFD22099A43002DEBB4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E165FFC22099A43002DEBB4 /* WeatherService.swift */; };
 		4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */; };
 		4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3C22097FCE004F1AF3 /* Constants.swift */; };
 		4EA69A3F22097FE5004F1AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA69A3E22097FE5004F1AF3 /* Main.storyboard */; };
@@ -18,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E71B17D220993D400236C2F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		4E165FF822099808002DEBB4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		4E165FFC22099A43002DEBB4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		4EA69A3C22097FCE004F1AF3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4EA69A3E22097FE5004F1AF3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -36,13 +38,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E71B17E220993D400236C2F /* Alamofire.framework in Frameworks */,
+				4E165FF922099808002DEBB4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E165FFB22099A2B002DEBB4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4E165FFC22099A43002DEBB4 /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4EA69A4322098065004F1AF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		4EB5B8DE220882680029104F = {
 			isa = PBXGroup;
 			children = (
+				4E165FF822099808002DEBB4 /* Alamofire.framework */,
 				4EB5B8E9220882680029104F /* Weather Status */,
 				4EB5B8E8220882680029104F /* Products */,
 			);
@@ -78,6 +89,7 @@
 		4EB5B8E9220882680029104F /* Weather Status */ = {
 			isa = PBXGroup;
 			children = (
+				4E165FFB22099A2B002DEBB4 /* Services */,
 				4EB5B8EA220882680029104F /* AppDelegate.swift */,
 				4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */,
 				4EA69A3C22097FCE004F1AF3 /* Constants.swift */,
@@ -87,7 +99,6 @@
 				4EA69A3E22097FE5004F1AF3 /* Main.storyboard */,
 				4EB5B8F3220882690029104F /* Info.plist */,
 				4EB5B8F4220882690029104F /* Weather_Status.entitlements */,
-				4E71B17D220993D400236C2F /* Alamofire.framework */,
 			);
 			path = "Weather Status";
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 				4EB5B8E3220882680029104F /* Sources */,
 				4EB5B8E4220882680029104F /* Frameworks */,
 				4EB5B8E5220882680029104F /* Resources */,
+				4E165FFA2209986A002DEBB4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -163,11 +175,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E165FFA2209986A002DEBB4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EB5B8E3220882680029104F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E165FFD22099A43002DEBB4 /* WeatherService.swift in Sources */,
 				4EA69A4522098066004F1AF3 /* WeatherCell.swift in Sources */,
 				4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */,
 				4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */,
@@ -308,6 +342,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolar.Weather-Status";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -329,6 +364,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bolar.Weather-Status";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
