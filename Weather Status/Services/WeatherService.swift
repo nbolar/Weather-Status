@@ -16,8 +16,8 @@ class WeatherService {
     func downloadWeatherDetails ()
     {
         let url = URL(string: API_URL_CURRENT_WEATHER)
-        AF.request(url!).responseJSON { (response) in
-            print(response.result.value)
+        AF.request(url!).responseData { (response) in
+            
         }
         
     }
