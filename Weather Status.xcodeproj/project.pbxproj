@@ -10,6 +10,8 @@
 		4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */; };
 		4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3C22097FCE004F1AF3 /* Constants.swift */; };
 		4EA69A3F22097FE5004F1AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA69A3E22097FE5004F1AF3 /* Main.storyboard */; };
+		4EA69A4522098066004F1AF3 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A4422098065004F1AF3 /* WeatherCell.swift */; };
+		4EA69A4822098073004F1AF3 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA69A4722098073004F1AF3 /* WeatherCell.xib */; };
 		4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5B8EA220882680029104F /* AppDelegate.swift */; };
 		4EB5B8EF220882690029104F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB5B8EE220882690029104F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,6 +20,8 @@
 		4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		4EA69A3C22097FCE004F1AF3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4EA69A3E22097FE5004F1AF3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4EA69A4422098065004F1AF3 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		4EA69A4722098073004F1AF3 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		4EB5B8E7220882680029104F /* Weather Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB5B8EA220882680029104F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB5B8EE220882690029104F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +40,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA69A4322098065004F1AF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EA69A4422098065004F1AF3 /* WeatherCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EA69A4622098073004F1AF3 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				4EA69A4722098073004F1AF3 /* WeatherCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		4EB5B8DE220882680029104F = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +79,8 @@
 				4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */,
 				4EA69A3C22097FCE004F1AF3 /* Constants.swift */,
 				4EB5B8EE220882690029104F /* Assets.xcassets */,
+				4EA69A4622098073004F1AF3 /* Xibs */,
+				4EA69A4322098065004F1AF3 /* View */,
 				4EA69A3E22097FE5004F1AF3 /* Main.storyboard */,
 				4EB5B8F3220882690029104F /* Info.plist */,
 				4EB5B8F4220882690029104F /* Weather_Status.entitlements */,
@@ -131,6 +153,7 @@
 			files = (
 				4EB5B8EF220882690029104F /* Assets.xcassets in Resources */,
 				4EA69A3F22097FE5004F1AF3 /* Main.storyboard in Resources */,
+				4EA69A4822098073004F1AF3 /* WeatherCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA69A4522098066004F1AF3 /* WeatherCell.swift in Sources */,
 				4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */,
 				4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */,
 				4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */,
