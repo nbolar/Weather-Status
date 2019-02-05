@@ -30,7 +30,17 @@ class WeatherVC: NSViewController {
     }
     
     override func viewDidAppear() {
-        self.view.layer?.backgroundColor = CGColor.clear
+        self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
+        updateUI()
+    }
+    
+    func updateUI() {
+        let weather = WeatherService.instance.currentWeather
+        dateLabel.stringValue = weather.date
+        locationLabel.stringValue = weather.cityName
+        tempLabel.stringValue = "\(weather.currentTemp)°"
+        weatherConditionLabel.stringValue = weather.weatherType.capitalized
+        weatherImage.image = NSImage(named: weather.weatherType)
     }
 
     override var representedObject: Any? {
@@ -46,14 +56,18 @@ extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCol
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let forecastItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "WeatherCell"), for: indexPath)
-        return forecastItem
+        
+        guard let forecastCell = forecastItem as? WeatherCell else { return forecastItem}
+        forecastCell.configureCell(weatherCell: WeatherService.instance.forecast[indexPath.item])
+        
+        return forecastCell
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return WeatherService.instance.forecast.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {

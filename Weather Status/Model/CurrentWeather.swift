@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class CurrentWeather {
     
@@ -56,8 +57,19 @@ class CurrentWeather {
     class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather{
         
         let currentWeather = CurrentWeather()
+        let swiftyJson = try! JSON(data: APIData)
         
+        currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
+        currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.lowercased()
+        currentWeather.currentTemp = swiftyJson["main"]["temp"].intValue
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        
+        let currentDate = dateFormatter.string(from: Date())
+        
+        currentWeather.date = "Today, \(currentDate)"
         
         return currentWeather
         
