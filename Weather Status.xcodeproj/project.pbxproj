@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E71B17E220993D400236C2F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E71B17D220993D400236C2F /* Alamofire.framework */; };
 		4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */; };
 		4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3C22097FCE004F1AF3 /* Constants.swift */; };
 		4EA69A3F22097FE5004F1AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA69A3E22097FE5004F1AF3 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E71B17D220993D400236C2F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		4EA69A3C22097FCE004F1AF3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4EA69A3E22097FE5004F1AF3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E71B17E220993D400236C2F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +87,7 @@
 				4EA69A3E22097FE5004F1AF3 /* Main.storyboard */,
 				4EB5B8F3220882690029104F /* Info.plist */,
 				4EB5B8F4220882690029104F /* Weather_Status.entitlements */,
+				4E71B17D220993D400236C2F /* Alamofire.framework */,
 			);
 			path = "Weather Status";
 			sourceTree = "<group>";
@@ -295,6 +299,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Weather Status/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Weather Status/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
