@@ -803,10 +803,10 @@
                                 </scroller>
                             </scrollView>
                             <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-71-ySa">
-                                <rect key="frame" x="375" y="5" width="20" height="20"/>
+                                <rect key="frame" x="368" y="348" width="32" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="1t6-FQ-y8D"/>
-                                    <constraint firstAttribute="width" constant="20" id="M3I-Sy-nSO"/>
+                                    <constraint firstAttribute="width" constant="32" id="7bd-de-cLJ"/>
+                                    <constraint firstAttribute="height" constant="22" id="DDf-cW-eFR"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-info-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="o4d-qh-rFH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -822,11 +822,11 @@
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
-                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" constant="5" id="gos-bH-R1y"/>
+                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" id="YlG-Yw-560"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
+                            <constraint firstItem="ccQ-71-ySa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="iz5-96-oLk"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pdX-G3-CzB"/>
-                            <constraint firstAttribute="bottom" secondItem="ccQ-71-ySa" secondAttribute="bottom" constant="5" id="tUl-62-hg0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -840,7 +840,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="437"/>
+            <point key="canvasLocation" x="74" y="436.5"/>
         </scene>
         <!--Info-->
         <scene sceneID="D36-4w-6bK">
