@@ -20,6 +20,8 @@
 		4EA69A4822098073004F1AF3 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA69A4722098073004F1AF3 /* WeatherCell.xib */; };
 		4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5B8EA220882680029104F /* AppDelegate.swift */; };
 		4EB5B8EF220882690029104F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB5B8EE220882690029104F /* Assets.xcassets */; };
+		4EDB4AFC220AB73D00420D5C /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB4AFB220AB73D00420D5C /* Info.swift */; };
+		4EDB4AFF220ACDFF00420D5C /* DarkSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB4AFD220ACDFF00420D5C /* DarkSky.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		4EB5B8EE220882690029104F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB5B8F3220882690029104F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB5B8F4220882690029104F /* Weather_Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weather_Status.entitlements; sourceTree = "<group>"; };
+		4EDB4AFB220AB73D00420D5C /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		4EDB4AFD220ACDFF00420D5C /* DarkSky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSky.swift; sourceTree = "<group>"; };
+		4EDB4B01220AD2FE00420D5C /* Weather Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Status.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */,
+				4EDB4AFD220ACDFF00420D5C /* DarkSky.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				4EA69A4422098065004F1AF3 /* WeatherCell.swift */,
+				4EDB4AFB220AB73D00420D5C /* Info.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 		4EB5B8E9220882680029104F /* Weather Status */ = {
 			isa = PBXGroup;
 			children = (
+				4EDB4B01220AD2FE00420D5C /* Weather Status.entitlements */,
 				4E1660092209E813002DEBB4 /* Extension */,
 				4E1660022209B6EE002DEBB4 /* Model */,
 				4E1660002209B6C3002DEBB4 /* Controller */,
@@ -250,11 +258,13 @@
 				4E165FFD22099A43002DEBB4 /* WeatherService.swift in Sources */,
 				4EA69A4522098066004F1AF3 /* WeatherCell.swift in Sources */,
 				4E1660082209E51E002DEBB4 /* Forecast.swift in Sources */,
+				4EDB4AFC220AB73D00420D5C /* Info.swift in Sources */,
 				4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */,
 				4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */,
 				4E1660042209B707002DEBB4 /* CurrentWeather.swift in Sources */,
 				4E16600B2209E827002DEBB4 /* NSDate.swift in Sources */,
 				4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */,
+				4EDB4AFF220ACDFF00420D5C /* DarkSky.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

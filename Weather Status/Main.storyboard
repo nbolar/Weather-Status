@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -841,38 +842,105 @@
             </objects>
             <point key="canvasLocation" x="74" y="437"/>
         </scene>
-        <!--View Controller-->
+        <!--Info-->
         <scene sceneID="D36-4w-6bK">
             <objects>
-                <viewController id="CcI-zZ-HkC" sceneMemberID="viewController">
+                <viewController id="CcI-zZ-HkC" customClass="Info" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-Hu-fJv">
-                                <rect key="frame" x="24" y="20" width="160" height="81"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Powered by Dark Sky [https://darksky.net/poweredby/]" id="l5S-tQ-H7T">
-                                    <font key="font" size="15" name="AvenirNext-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEs-n7-hVS">
-                                <rect key="frame" x="16" y="101" width="176" height="79"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Icons made by Freepik from www.flaticon.com" id="IKo-40-Mg4">
-                                    <font key="font" size="15" name="AvenirNext-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Np-Zb-Gfh">
+                                <rect key="frame" x="-10" y="4" width="220" height="212"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
+                                        <rect key="frame" x="91" y="170" width="39" height="42"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
+                                            <font key="font" size="34" name="ZapfDingbatsITC"/>
+                                            <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-Ef-Bnc">
+                                        <rect key="frame" x="0.0" y="105" width="220" height="50"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Icon made by Freepik from www.flaticon.com" drawsBackground="YES" id="Xqm-Os-5Tr">
+                                            <font key="font" size="15" name="AvenirNext-Regular"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-ks-8T9">
+                                        <rect key="frame" x="38" y="65" width="144" height="25"/>
+                                        <buttonCell key="cell" type="roundRect" title="Powered By DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="15" name="AvenirNext-Regular"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" red="0.27123017184717124" green="1" blue="0.83111002717504434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="e55-0n-TeX" kind="modal" id="P4J-dA-DVJ"/>
+                                        </connections>
+                                    </button>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-jH-DJB">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Powered by OpenWeatherMap" drawsBackground="YES" id="w9o-4E-nZl">
+                                            <font key="font" size="15" name="AvenirNext-Regular"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="JrN-Xw-U2B"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="7Np-Zb-Gfh" firstAttribute="centerY" secondItem="aTm-WH-8GS" secondAttribute="centerY" id="8Pl-Z5-ClV"/>
+                            <constraint firstItem="7Np-Zb-Gfh" firstAttribute="centerX" secondItem="aTm-WH-8GS" secondAttribute="centerX" id="N0U-XS-lxf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="fGZ-ru-T8Q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624" y="392"/>
+            <point key="canvasLocation" x="623.5" y="391.5"/>
+        </scene>
+        <!--Dark Sky-->
+        <scene sceneID="uG3-nm-dEY">
+            <objects>
+                <viewController id="e55-0n-TeX" customClass="DarkSky" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="rLH-6s-yZN">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sch-lg-8Kn">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="sch-lg-8Kn" id="skh-dG-c0m"/>
+                    </connections>
+                </viewController>
+                <customObject id="7yT-a6-Y04" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="354"/>
         </scene>
     </scenes>
     <resources>
