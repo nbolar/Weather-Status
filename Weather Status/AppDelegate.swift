@@ -19,11 +19,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         statusItem.button?.title = "--°"
         statusItem.button?.action = #selector(AppDelegate.displayPopUp(_:))
+        
+        let updateWeatherData = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func downloadWeatherData(){
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType)_small")
-
+            
             self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)°"
             WeatherService.instance.downloadForecast(completed: {
+                NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
                 
             })
         }

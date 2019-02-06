@@ -30,9 +30,23 @@ class WeatherVC: NSViewController {
     }
     
     override func viewDidAppear() {
+        NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.dataDownloadedNotif(_:)), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
         self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
         updateUI()
     }
+    
+    
+    override func viewDidDisappear() {
+        NotificationCenter.default.removeObserver(self, name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
+    }
+    
+    
+    @objc func dataDownloadedNotif(_ notif: Notification){
+        updateUI()
+        
+        
+    }
+    
     
     func updateUI() {
         let weather = WeatherService.instance.currentWeather
@@ -41,7 +55,9 @@ class WeatherVC: NSViewController {
         tempLabel.stringValue = "\(weather.currentTemp)°"
         weatherConditionLabel.stringValue = weather.weatherType.capitalized
         weatherImage.image = NSImage(named: weather.weatherType)
+        collectionView.reloadData()
     }
+    
 
     @IBAction func quitButtonClicked(_ sender: Any) {
         NSApp.terminate(nil)

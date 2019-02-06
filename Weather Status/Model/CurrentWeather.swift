@@ -18,7 +18,7 @@ class CurrentWeather {
     
     var cityName: String{
         get{
-            return _cityName
+            return _cityName ?? "None"
         }
         set {
             _cityName = newValue
@@ -28,7 +28,7 @@ class CurrentWeather {
     
     var date: String{
         get{
-            return _date
+            return _date ?? "None"
         }
         set {
             _date = newValue
@@ -37,7 +37,7 @@ class CurrentWeather {
     
     var weatherType: String{
         get{
-            return _weatherType
+            return _weatherType ?? "None"
         }
         set {
             _weatherType = newValue
@@ -46,7 +46,7 @@ class CurrentWeather {
     
     var currentTemp: Int{
         get{
-            return _currentTemp
+            return _currentTemp ?? 0
         }
         set {
             _currentTemp = newValue

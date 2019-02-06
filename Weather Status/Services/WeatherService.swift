@@ -37,7 +37,11 @@ class WeatherService {
         let url = URL(string: API_URL_CURRENT_WEATHER)
         AF.request(url!).responseData { (response) in
             
-            self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+            if response.data != nil
+            {
+                self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+            }
+            
             
             completed()
             
@@ -52,7 +56,10 @@ class WeatherService {
         let url = URL(string: API_URL_FORECAST)
         AF.request(url!).responseJSON { (response) in
             
-            self.forecast = Forecast.loadForecastFromData(response.data!)
+            if response.data != nil
+            {
+                self.forecast = Forecast.loadForecastFromData(response.data!)
+            }
             if self.forecast.count > 0 {
                 self.forecast.remove(at: 0)
             }
