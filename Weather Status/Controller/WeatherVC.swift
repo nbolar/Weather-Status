@@ -43,6 +43,10 @@ class WeatherVC: NSViewController {
         weatherImage.image = NSImage(named: weather.weatherType)
     }
 
+    @IBAction func quitButtonClicked(_ sender: Any) {
+        NSApp.terminate(nil)
+    }
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.

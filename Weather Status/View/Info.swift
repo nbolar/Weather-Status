@@ -11,9 +11,18 @@ import Foundation
 
 class Info: NSViewController {
     
-
-    @IBOutlet weak var DarkSky: NSTextField!
     
+    @IBAction func poweredByButtonClicked(_ sender: Any) {
+        let url = URL(string: "https://darksky.net/poweredby/")!
+        NSWorkspace.shared.open(url)
+        
+    }
+    
+    @IBAction func openWeatherButtonClicked(_ sender: Any) {
+        let url = URL(string: "https://openweathermap.org")!
+        NSWorkspace.shared.open(url)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

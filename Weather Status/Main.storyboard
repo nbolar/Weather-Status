@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -802,11 +801,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-71-ySa">
+                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-6S-o59">
                                 <rect key="frame" x="368" y="348" width="32" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="7bd-de-cLJ"/>
-                                    <constraint firstAttribute="height" constant="22" id="DDf-cW-eFR"/>
+                                    <constraint firstAttribute="width" constant="32" id="GKR-SX-xfq"/>
+                                    <constraint firstAttribute="height" constant="22" id="JPx-1f-aU3"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-cancel-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="T3M-gh-8st">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="b1Z-xe-2lR"/>
+                                </connections>
+                            </button>
+                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-71-ySa">
+                                <rect key="frame" x="368" y="5" width="32" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="LDj-gi-UGH"/>
+                                    <constraint firstAttribute="width" constant="32" id="S7t-bP-0Bl"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-info-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="o4d-qh-rFH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -819,12 +833,14 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nbC-6S-o59" secondAttribute="trailing" id="0P6-Il-2RU"/>
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
+                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" id="EGS-z0-U1W"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
-                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" id="YlG-Yw-560"/>
+                            <constraint firstItem="nbC-6S-o59" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="cax-Lf-TGq"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
-                            <constraint firstItem="ccQ-71-ySa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="iz5-96-oLk"/>
+                            <constraint firstAttribute="bottom" secondItem="ccQ-71-ySa" secondAttribute="bottom" constant="5" id="pAF-hs-cut"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pdX-G3-CzB"/>
                         </constraints>
@@ -847,14 +863,14 @@
             <objects>
                 <viewController id="CcI-zZ-HkC" customClass="Info" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Np-Zb-Gfh">
-                                <rect key="frame" x="-10" y="4" width="220" height="212"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-P0-4Sl">
+                                <rect key="frame" x="0.0" y="12" width="220" height="196"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
-                                        <rect key="frame" x="91" y="170" width="39" height="42"/>
+                                        <rect key="frame" x="91" y="154" width="39" height="42"/>
                                         <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
                                             <font key="font" size="34" name="ZapfDingbatsITC"/>
                                             <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
@@ -862,7 +878,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-Ef-Bnc">
-                                        <rect key="frame" x="0.0" y="105" width="220" height="50"/>
+                                        <rect key="frame" x="0.0" y="86" width="220" height="50"/>
                                         <textFieldCell key="cell" selectable="YES" alignment="center" title="Icon made by Freepik from www.flaticon.com" drawsBackground="YES" id="Xqm-Os-5Tr">
                                             <font key="font" size="15" name="AvenirNext-Regular"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -870,27 +886,30 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-ks-8T9">
-                                        <rect key="frame" x="38" y="65" width="144" height="25"/>
+                                        <rect key="frame" x="38" y="43" width="144" height="25"/>
                                         <buttonCell key="cell" type="roundRect" title="Powered By DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="15" name="AvenirNext-Regular"/>
                                         </buttonCell>
                                         <color key="contentTintColor" red="0.27123017184717124" green="1" blue="0.83111002717504434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="e55-0n-TeX" kind="modal" id="P4J-dA-DVJ"/>
+                                            <action selector="poweredByButtonClicked:" target="CcI-zZ-HkC" id="5Gq-gG-LwQ"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-jH-DJB">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
-                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Powered by OpenWeatherMap" drawsBackground="YES" id="w9o-4E-nZl">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-ux-syT">
+                                        <rect key="frame" x="2" y="0.0" width="217" height="25"/>
+                                        <buttonCell key="cell" type="roundRect" title="Powered by OpenWeatherMap" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="15" name="AvenirNext-Regular"/>
-                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </textFieldCell>
-                                    </textField>
+                                        </buttonCell>
+                                        <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="openWeatherButtonClicked:" target="CcI-zZ-HkC" id="vAP-gV-exa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="JrN-Xw-U2B"/>
+                                    <constraint firstAttribute="width" constant="220" id="Fj2-XW-ohg"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -907,8 +926,8 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7Np-Zb-Gfh" firstAttribute="centerY" secondItem="aTm-WH-8GS" secondAttribute="centerY" id="8Pl-Z5-ClV"/>
-                            <constraint firstItem="7Np-Zb-Gfh" firstAttribute="centerX" secondItem="aTm-WH-8GS" secondAttribute="centerX" id="N0U-XS-lxf"/>
+                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerY" secondItem="aTm-WH-8GS" secondAttribute="centerY" id="GzO-Ei-Hbk"/>
+                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerX" secondItem="aTm-WH-8GS" secondAttribute="centerX" id="iTT-tb-Jvd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -916,35 +935,10 @@
             </objects>
             <point key="canvasLocation" x="623.5" y="391.5"/>
         </scene>
-        <!--Dark Sky-->
-        <scene sceneID="uG3-nm-dEY">
-            <objects>
-                <viewController id="e55-0n-TeX" customClass="DarkSky" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="rLH-6s-yZN">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <wkWebView wantsLayer="YES" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sch-lg-8Kn">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="sch-lg-8Kn" id="skh-dG-c0m"/>
-                    </connections>
-                </viewController>
-                <customObject id="7yT-a6-Y04" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1065" y="354"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Clear" width="107" height="107"/>
+        <image name="icons8-cancel-100" width="75" height="75"/>
         <image name="icons8-info-100" width="75" height="75"/>
     </resources>
 </document>
