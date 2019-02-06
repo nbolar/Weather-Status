@@ -60,7 +60,7 @@ class CurrentWeather {
         let swiftyJson = try! JSON(data: APIData)
         
         currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
-        currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.lowercased()
+        currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.capitalized
         currentWeather.currentTemp = swiftyJson["main"]["temp"].intValue
         
         let dateFormatter = DateFormatter()
