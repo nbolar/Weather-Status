@@ -941,73 +941,64 @@ AAAAAAEGA
             <objects>
                 <viewController id="CcI-zZ-HkC" customClass="Info" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
-                        <rect key="frame" x="0.0" y="0.0" width="220" height="256"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="237"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-P0-4Sl">
-                                <rect key="frame" x="0.0" y="30" width="220" height="196"/>
-                                <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
-                                        <rect key="frame" x="91" y="154" width="39" height="42"/>
-                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
-                                            <font key="font" size="34" name="ZapfDingbatsITC"/>
-                                            <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-Ef-Bnc">
-                                        <rect key="frame" x="0.0" y="86" width="220" height="50"/>
-                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="Icon made by Freepik from www.flaticon.com" drawsBackground="YES" id="Xqm-Os-5Tr">
-                                            <font key="font" size="15" name="AvenirNext-Regular"/>
-                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-ks-8T9">
-                                        <rect key="frame" x="38" y="43" width="144" height="25"/>
-                                        <buttonCell key="cell" type="roundRect" title="Powered By DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="15" name="AvenirNext-Regular"/>
-                                        </buttonCell>
-                                        <color key="contentTintColor" red="0.27123017184717124" green="1" blue="0.83111002717504434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <connections>
-                                            <action selector="poweredByButtonClicked:" target="CcI-zZ-HkC" id="5Gq-gG-LwQ"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-ux-syT">
-                                        <rect key="frame" x="2" y="0.0" width="217" height="25"/>
-                                        <buttonCell key="cell" type="roundRect" title="Powered by OpenWeatherMap" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="15" name="AvenirNext-Regular"/>
-                                        </buttonCell>
-                                        <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <connections>
-                                            <action selector="openWeatherButtonClicked:" target="CcI-zZ-HkC" id="vAP-gV-exa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="Fj2-XW-ohg"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
+                                <rect key="frame" x="91" y="185" width="39" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
+                                    <font key="font" size="34" name="ZapfDingbatsITC"/>
+                                    <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-Ef-Bnc">
+                                <rect key="frame" x="0.0" y="115" width="220" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Icons made by Freepik from www.flaticon.com" drawsBackground="YES" id="Xqm-Os-5Tr">
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnG-lx-avG">
+                                <rect key="frame" x="50" y="80" width="121" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Glyphs by Icons8" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bLy-vP-9CT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="glyphsButtonClicked:" target="CcI-zZ-HkC" id="Bew-hT-jg9"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-ks-8T9">
+                                <rect key="frame" x="38" y="45" width="144" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Powered By DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.27123017184717124" green="1" blue="0.83111002717504434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="poweredByButtonClicked:" target="CcI-zZ-HkC" id="5Gq-gG-LwQ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-ux-syT">
+                                <rect key="frame" x="2" y="10" width="217" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Powered by OpenWeatherMap" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="openWeatherButtonClicked:" target="CcI-zZ-HkC" id="vAP-gV-exa"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerY" secondItem="aTm-WH-8GS" secondAttribute="centerY" id="GzO-Ei-Hbk"/>
-                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="top" secondItem="aTm-WH-8GS" secondAttribute="top" constant="30" id="Vr6-Sw-PuJ"/>
-                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerX" secondItem="aTm-WH-8GS" secondAttribute="centerX" id="iTT-tb-Jvd"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="fGZ-ru-T8Q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

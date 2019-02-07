@@ -23,6 +23,11 @@ class Info: NSViewController {
         NSWorkspace.shared.open(url)
         
     }
+    @IBAction func glyphsButtonClicked(_ sender: Any) {
+        let url = URL(string: "https://icons8.com/")!
+        NSWorkspace.shared.open(url)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
