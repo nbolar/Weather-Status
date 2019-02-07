@@ -35,5 +35,7 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>

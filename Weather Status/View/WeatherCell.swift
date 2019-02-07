@@ -16,6 +16,7 @@ class WeatherCell: NSCollectionViewItem {
     @IBOutlet weak var cellDate: NSTextField!
     @IBOutlet weak var highTemp: NSTextField!
     @IBOutlet weak var lowTemp: NSTextField!
+    @IBOutlet weak var weatherConditions: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,8 @@ class WeatherCell: NSCollectionViewItem {
     
     func configureCell(weatherCell: Forecast)
     {
-        weatherCellImage.image = NSImage(named: weatherCell.weatherType)
+        weatherCellImage.image = NSImage(named: weatherCell.weatherType.lowercased())
+        weatherConditions.stringValue = "\(weatherCell.weatherType)"
         highTemp.stringValue = "\(weatherCell.highTemp)°"
         lowTemp.stringValue = "\(weatherCell.lowTemp)°"
         cellDate.stringValue = weatherCell.date

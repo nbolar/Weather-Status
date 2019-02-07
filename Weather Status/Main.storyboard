@@ -685,11 +685,11 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherVC" id="XfG-lQ-9wD" customClass="WeatherVC" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="390"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="71" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-G2-yfC">
-                                <rect key="frame" x="20" y="184" width="360" height="171"/>
+                                <rect key="frame" x="20" y="199" width="360" height="171"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-u9-0ij">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="171"/>
@@ -739,7 +739,7 @@
                                                     <constraint firstAttribute="width" constant="107" id="Eey-6u-Dr4"/>
                                                     <constraint firstAttribute="height" constant="107" id="rTG-JL-v1r"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Clear" id="oim-Nx-ai8"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="clear" id="oim-Nx-ai8"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Ee-pRo">
                                                 <rect key="frame" x="54" y="0.0" width="41" height="25"/>
@@ -773,7 +773,7 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-D8-kak">
-                                <rect key="frame" x="20" y="14" width="360" height="150"/>
+                                <rect key="frame" x="20" y="29" width="360" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="90t-2e-uw0">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -801,48 +801,49 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-6S-o59">
-                                <rect key="frame" x="368" y="348" width="32" height="22"/>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3zu-XS-Li4">
+                                <rect key="frame" x="363" y="5" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="GKR-SX-xfq"/>
-                                    <constraint firstAttribute="height" constant="22" id="JPx-1f-aU3"/>
+                                    <constraint firstAttribute="height" constant="32" id="BxB-r5-r07"/>
+                                    <constraint firstAttribute="width" constant="32" id="lwM-xB-kwr"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-cancel-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="T3M-gh-8st">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="b1Z-xe-2lR"/>
-                                </connections>
-                            </button>
-                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-71-ySa">
-                                <rect key="frame" x="368" y="5" width="32" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="LDj-gi-UGH"/>
-                                    <constraint firstAttribute="width" constant="32" id="S7t-bP-0Bl"/>
-                                </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-info-100" imagePosition="overlaps" alignment="center" state="mixed" allowsMixedState="YES" imageScaling="proportionallyUpOrDown" inset="2" id="o4d-qh-rFH">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarGetInfoTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="KnU-9R-Guv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="contentTintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <segue destination="CcI-zZ-HkC" kind="popover" popoverAnchorView="ccQ-71-ySa" popoverBehavior="t" preferredEdge="maxX" id="zWD-El-11t"/>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="VXM-qi-1sv"/>
+                                    <segue destination="CcI-zZ-HkC" kind="popover" popoverAnchorView="3zu-XS-Li4" popoverBehavior="t" preferredEdge="maxX" id="fal-2c-Sxp"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="unt-Bd-Vid">
+                                <rect key="frame" x="370" y="362" width="22" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="Ja5-AN-9Z1"/>
+                                    <constraint firstAttribute="height" constant="18" id="pKG-xM-uoB"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStopProgressFreestandingTemplate" imagePosition="only" alignment="center" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="VGK-jD-Z7B">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="eTX-d8-BVb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nbC-6S-o59" secondAttribute="trailing" id="0P6-Il-2RU"/>
+                            <constraint firstItem="unt-Bd-Vid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="4o6-Aq-TNI"/>
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
-                            <constraint firstAttribute="trailing" secondItem="ccQ-71-ySa" secondAttribute="trailing" id="EGS-z0-U1W"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
-                            <constraint firstItem="nbC-6S-o59" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="cax-Lf-TGq"/>
+                            <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="8" id="hNQ-dD-IS9"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
-                            <constraint firstAttribute="bottom" secondItem="ccQ-71-ySa" secondAttribute="bottom" constant="5" id="pAF-hs-cut"/>
+                            <constraint firstAttribute="bottom" secondItem="3zu-XS-Li4" secondAttribute="bottom" constant="5" id="o9u-x5-rby"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pdX-G3-CzB"/>
+                            <constraint firstAttribute="trailing" secondItem="3zu-XS-Li4" secondAttribute="trailing" constant="5" id="wIp-eZ-w1I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -937,8 +938,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Clear" width="107" height="107"/>
-        <image name="icons8-cancel-100" width="75" height="75"/>
-        <image name="icons8-info-100" width="75" height="75"/>
+        <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
+        <image name="NSTouchBarGetInfoTemplate" width="18" height="30"/>
+        <image name="clear" width="512" height="512"/>
     </resources>
 </document>
