@@ -9,6 +9,7 @@
 import Cocoa
 import CoreLocation
 
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
@@ -16,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
+ 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -42,6 +44,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     @objc func downloadWeatherData(){
+        
+//        print(unit1, unit2)
+        
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
             self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)°"

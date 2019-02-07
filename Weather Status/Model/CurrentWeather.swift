@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 
+
 class CurrentWeather {
     
     fileprivate var _cityName: String!
@@ -62,6 +63,8 @@ class CurrentWeather {
         currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
         currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.capitalized
         currentWeather.currentTemp = swiftyJson["main"]["temp"].intValue
+        
+        
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long

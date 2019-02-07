@@ -8,16 +8,23 @@
 
 import Foundation
 
+
+
 typealias DownloadComplete = () -> ()
 
 let NOTIF_DOWNLOAD_COMPLETE = NSNotification.Name("dataDownloaded")
 
 let LONG = Location.instance.longitude
 let LAT = Location.instance.latitude
+var units = 1
 
 let API_KEY1 = "&appid=691657a05faabbd6ef5736fbcdcf951f"
 let API_KEY2 = "47c545315eff2221c6346d3ee071083d"
-let API_URL_CURRENT_WEATHER = "https://api.openweathermap.org/data/2.5/weather?lat=\(LAT)&lon=\(LONG)&units=metric\(API_KEY1)"
-let API_URL_FORECAST  = "https://api.darksky.net/forecast/\(API_KEY2)/\(LAT),\(LONG)?units=si"
+let API_URL_CURRENT_WEATHER_si = "https://api.openweathermap.org/data/2.5/weather?lat=\(LAT)&lon=\(LONG)&units=metric\(API_KEY1)"
+let API_URL_FORECAST_si  = "https://api.darksky.net/forecast/\(API_KEY2)/\(LAT),\(LONG)?units=si"
+
+let API_URL_CURRENT_WEATHER_us = "https://api.openweathermap.org/data/2.5/weather?lat=\(LAT)&lon=\(LONG)&units=imperial\(API_KEY1)"
+let API_URL_FORECAST_us  = "https://api.darksky.net/forecast/\(API_KEY2)/\(LAT),\(LONG)?units=us"
+
 
 

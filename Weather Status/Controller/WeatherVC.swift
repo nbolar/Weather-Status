@@ -11,6 +11,7 @@ import Alamofire
 
 
 class WeatherVC: NSViewController {
+    
 
     @IBOutlet weak var dateLabel: NSTextField!
     @IBOutlet weak var tempLabel: NSTextField!
@@ -18,7 +19,10 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var weatherImage: NSImageView!
     @IBOutlet weak var weatherConditionLabel: NSTextField!
     @IBOutlet weak var collectionView: NSCollectionView!
-
+    @IBOutlet weak var refreshButton: NSButton!
+    @IBOutlet weak var refreshed: NSTextField!
+    @IBOutlet weak var farenheit: NSButton!
+    @IBOutlet weak var celsius: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +63,57 @@ class WeatherVC: NSViewController {
     }
     
 
+    @IBAction func celsiusButtonClicked(_ sender: Any) {
+        
+        units = 1
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        appDelegate.downloadWeatherData()
+        updateUI()
+        farenheit.isHidden = false
+        celsius.isHidden = true
+        
+        
+    }
+    @IBAction func farenheitButtonClciked(_ sender: Any) {
+        
+        units = 2
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        appDelegate.downloadWeatherData()
+        updateUI()
+        farenheit.isHidden = true
+        celsius.isHidden = false
+        
+        
+    }
+    @IBAction func refreshButtonClicked(_ sender: Any) {
+        
+        refreshed.isHidden = false
+
+        weatherImage.image = NSImage(named: "icons8-update-100")
+        tempLabel.stringValue = "--"
+        weatherConditionLabel.stringValue = "--"
+
+        
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
+    }
+    
     @IBAction func quitButtonClicked(_ sender: Any) {
         NSApp.terminate(nil)
     }
+    
+    @objc func dismissText(){
+        
+        if refreshed.isHidden == false
+        {
+            
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.downloadWeatherData()
+            refreshed.isHidden = true
+            updateUI()
+        }
+    }
+    
+
     
     override var representedObject: Any? {
         didSet {

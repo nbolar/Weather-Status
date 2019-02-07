@@ -685,11 +685,11 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherVC" id="XfG-lQ-9wD" customClass="WeatherVC" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="71" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-G2-yfC">
-                                <rect key="frame" x="20" y="199" width="360" height="171"/>
+                                <rect key="frame" x="20" y="189" width="360" height="171"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-u9-0ij">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="171"/>
@@ -698,7 +698,7 @@
                                                 <rect key="frame" x="24" y="146" width="93" height="25"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="Today's Date" drawsBackground="YES" id="5Es-6s-Zki">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
@@ -706,7 +706,7 @@
                                                 <rect key="frame" x="0.0" y="33" width="141" height="105"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="100°" drawsBackground="YES" id="xKV-Gk-aEa">
                                                     <font key="font" size="64" name="AvenirNext-Regular"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
@@ -714,7 +714,7 @@
                                                 <rect key="frame" x="10" y="0.0" width="121" height="25"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="Portland, Oregan" drawsBackground="YES" id="143-gk-N4Z">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
@@ -745,7 +745,7 @@
                                                 <rect key="frame" x="54" y="0.0" width="41" height="25"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Clear" drawsBackground="YES" id="HgZ-GJ-BKD">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
                                             </textField>
@@ -773,7 +773,7 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-D8-kak">
-                                <rect key="frame" x="20" y="29" width="360" height="150"/>
+                                <rect key="frame" x="20" y="19" width="360" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="90t-2e-uw0">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -802,7 +802,7 @@
                                 </scroller>
                             </scrollView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="3zu-XS-Li4">
-                                <rect key="frame" x="363" y="5" width="32" height="32"/>
+                                <rect key="frame" x="368" y="0.0" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="BxB-r5-r07"/>
                                     <constraint firstAttribute="width" constant="32" id="lwM-xB-kwr"/>
@@ -818,7 +818,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="unt-Bd-Vid">
-                                <rect key="frame" x="370" y="362" width="22" height="18"/>
+                                <rect key="frame" x="373" y="372" width="22" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="Ja5-AN-9Z1"/>
                                     <constraint firstAttribute="height" constant="18" id="pKG-xM-uoB"/>
@@ -832,24 +832,101 @@
                                     <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="eTX-d8-BVb"/>
                                 </connections>
                             </button>
+                            <button springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yim-Dh-ib8">
+                                <rect key="frame" x="5" y="372" width="22" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="5jI-bd-yqr"/>
+                                    <constraint firstAttribute="width" constant="22" id="WQI-os-hZ0"/>
+                                </constraints>
+                                <animations>
+                                    <caTransition key="subviews">
+                                        <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGICFYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKcHCA8Q
+CRUbVSRudWxs0wkKCwwNDlR0eXBlViRjbGFzc18QEl9fQ0FDb2RpbmdDb250ZW50c4ACgAaAA1RmYWRl
+0hEKEhRaTlMub2JqZWN0c6ETgASABdIWFxgZWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNBcnJheaIYGlhO
+U09iamVjdNIWFxwdXENBVHJhbnNpdGlvbqMeHxpcQ0FUcmFuc2l0aW9uW0NBQW5pbWF0aW9uXxAPTlNL
+ZXllZEFyY2hpdmVy0SIjVHJvb3SAAQAIABEAGgAjAC0AMgA3AD8ARQBMAFEAWABtAG8AcQBzAHgAfQCI
+AIoAjACOAJMAngCnAK8AsgC7AMAAzQDRAN4A6gD8AP8BBAAAAAAAAAIBAAAAAAAAACQAAAAAAAAAAAAA
+AAAAAAEGA
+</mutableData>
+                                    </caTransition>
+                                </animations>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRefreshFreestandingTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="nec-ar-h3N">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="refreshButtonClicked:" target="XfG-lQ-9wD" id="2xS-HQ-Yik"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vpp-b5-zgs">
+                                <rect key="frame" x="88" y="370" width="224" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="KTk-4D-cWJ"/>
+                                    <constraint firstAttribute="height" constant="23" id="UdD-DC-gwr"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Fetching Current Weather Details" id="ji1-20-g9i">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="IG2-Bl-su9">
+                                <rect key="frame" x="5" y="5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="IOi-ET-iWr"/>
+                                    <constraint firstAttribute="width" constant="24" id="NEb-jR-gj7"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="farenheit" imagePosition="overlaps" alignment="center" controlSize="small" state="on" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="9gd-Yw-RMl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="14" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="farenheitButtonClciked:" target="XfG-lQ-9wD" id="f8V-qO-kQn"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-ZJ-kjj">
+                                <rect key="frame" x="5" y="5" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="celsius" imagePosition="overlaps" alignment="center" controlSize="small" state="on" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="9YX-PE-XJV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="14" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="celsiusButtonClicked:" target="XfG-lQ-9wD" id="7iW-S3-ktm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="unt-Bd-Vid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="4o6-Aq-TNI"/>
+                            <constraint firstItem="yim-Dh-ib8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="5" id="5xL-HY-Vah"/>
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
+                            <constraint firstItem="yim-Dh-ib8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="RBJ-Ve-xIE"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
-                            <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="8" id="hNQ-dD-IS9"/>
+                            <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
+                            <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="5" id="Zsz-iU-2NY"/>
+                            <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="5" id="hNQ-dD-IS9"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
-                            <constraint firstAttribute="bottom" secondItem="3zu-XS-Li4" secondAttribute="bottom" constant="5" id="o9u-x5-rby"/>
+                            <constraint firstAttribute="bottom" secondItem="3zu-XS-Li4" secondAttribute="bottom" id="o9u-x5-rby"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
-                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pdX-G3-CzB"/>
-                            <constraint firstAttribute="trailing" secondItem="3zu-XS-Li4" secondAttribute="trailing" constant="5" id="wIp-eZ-w1I"/>
+                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="pdX-G3-CzB"/>
+                            <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="5" id="qRg-qq-6pf"/>
+                            <constraint firstAttribute="trailing" secondItem="3zu-XS-Li4" secondAttribute="trailing" id="wIp-eZ-w1I"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="celsius" destination="jBE-ZJ-kjj" id="qv8-2a-ybI"/>
                         <outlet property="collectionView" destination="c56-Lo-BTP" id="VwU-6D-Z3d"/>
                         <outlet property="dateLabel" destination="iwk-Qq-iG9" id="8CA-fd-zVF"/>
+                        <outlet property="farenheit" destination="IG2-Bl-su9" id="Njs-hA-FSo"/>
                         <outlet property="locationLabel" destination="EAz-VD-Ck8" id="2B6-6d-Koq"/>
+                        <outlet property="refreshButton" destination="yim-Dh-ib8" id="7pz-UP-YDw"/>
+                        <outlet property="refreshed" destination="vpp-b5-zgs" id="fG6-H5-MQR"/>
                         <outlet property="tempLabel" destination="mcD-fg-t0R" id="SUv-H2-Net"/>
                         <outlet property="weatherConditionLabel" destination="pc5-Ee-pRo" id="ybx-Sr-TTV"/>
                         <outlet property="weatherImage" destination="DST-cD-8hV" id="iZS-dQ-Ayt"/>
@@ -864,11 +941,11 @@
             <objects>
                 <viewController id="CcI-zZ-HkC" customClass="Info" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
-                        <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="256"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-P0-4Sl">
-                                <rect key="frame" x="0.0" y="12" width="220" height="196"/>
+                                <rect key="frame" x="0.0" y="30" width="220" height="196"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
                                         <rect key="frame" x="91" y="154" width="39" height="42"/>
@@ -928,18 +1005,22 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerY" secondItem="aTm-WH-8GS" secondAttribute="centerY" id="GzO-Ei-Hbk"/>
+                            <constraint firstItem="ea7-P0-4Sl" firstAttribute="top" secondItem="aTm-WH-8GS" secondAttribute="top" constant="30" id="Vr6-Sw-PuJ"/>
                             <constraint firstItem="ea7-P0-4Sl" firstAttribute="centerX" secondItem="aTm-WH-8GS" secondAttribute="centerX" id="iTT-tb-Jvd"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="fGZ-ru-T8Q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623.5" y="391.5"/>
+            <point key="canvasLocation" x="623" y="391"/>
         </scene>
     </scenes>
     <resources>
+        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="NSTouchBarGetInfoTemplate" width="18" height="30"/>
+        <image name="celsius" width="24" height="24"/>
         <image name="clear" width="512" height="512"/>
+        <image name="farenheit" width="24" height="24"/>
     </resources>
 </document>

@@ -16,7 +16,7 @@
                     <rect key="frame" x="38" y="107" width="54" height="23"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Monday" drawsBackground="YES" id="4RI-4w-3Qk">
                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
@@ -24,7 +24,7 @@
                     <rect key="frame" x="98" y="4" width="28" height="23"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="100" drawsBackground="YES" id="mOA-4b-mQL">
                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
@@ -40,7 +40,7 @@
                     <rect key="frame" x="4" y="4" width="28" height="23"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="100" drawsBackground="YES" id="FZz-Cd-Jhd">
                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
@@ -49,7 +49,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="100" drawsBackground="YES" id="0il-XN-KlK">
                         <font key="font" size="10" name="AvenirNext-DemiBold"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>

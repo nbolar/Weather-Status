@@ -34,40 +34,79 @@ class WeatherService {
     
     func downloadWeatherDetails (completed: @escaping DownloadComplete)
     {
-        let url = URL(string: API_URL_CURRENT_WEATHER)
-        AF.request(url!).responseData { (response) in
-            
-            if response.data != nil
-            {
-                self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+        if units == 1
+        {
+            let url = URL(string: API_URL_CURRENT_WEATHER_si)
+            AF.request(url!).responseData { (response) in
+                
+                if response.data != nil
+                {
+                    self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+                }
+                
+                
+                completed()
             }
-            
-            
-            completed()
+        }
+            else{
+                
+                let url = URL(string: API_URL_CURRENT_WEATHER_us)
+                AF.request(url!).responseData { (response) in
+                    
+                    if response.data != nil
+                    {
+                        self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+                    }
+                    
+                    
+                    completed()
+            }
+        }
+        
             
             
             
         }
-        
-    }
+    
     
     func downloadForecast(completed: @escaping DownloadComplete) {
         
-        let url = URL(string: API_URL_FORECAST)
-        AF.request(url!).responseJSON { (response) in
-            
-            if response.data != nil
-            {
-                self.forecast = Forecast.loadForecastFromData(response.data!)
+        
+        if units == 1
+        {
+            let url = URL(string: API_URL_FORECAST_si)
+            AF.request(url!).responseJSON { (response) in
+                
+                if response.data != nil
+                {
+                    self.forecast = Forecast.loadForecastFromData(response.data!)
+                }
+                if self.forecast.count > 0 {
+                    self.forecast.remove(at: 0)
+                }
+                
+                completed()
             }
-            if self.forecast.count > 0 {
-                self.forecast.remove(at: 0)
-            }
             
-            completed()
+        } else
+        {
+            let url = URL(string: API_URL_FORECAST_us)
+            AF.request(url!).responseJSON { (response) in
+                
+                if response.data != nil
+                {
+                    self.forecast = Forecast.loadForecastFromData(response.data!)
+                }
+                if self.forecast.count > 0 {
+                    self.forecast.remove(at: 0)
+                }
+                
+                completed()
+            }
         }
+        
         
     }
     
-    
 }
+
