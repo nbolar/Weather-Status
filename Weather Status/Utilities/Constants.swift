@@ -18,6 +18,8 @@ let LONG = Location.instance.longitude
 let LAT = Location.instance.latitude
 var units = 1
 var interval = 15
+var celsi = 1
+var fahrenheit = 0
 
 let API_KEY1 = "&appid=691657a05faabbd6ef5736fbcdcf951f"
 let API_KEY2 = "47c545315eff2221c6346d3ee071083d"

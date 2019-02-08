@@ -19,13 +19,14 @@ class Settings: NSViewController {
     @IBOutlet weak var fifteenMinutes: NSButton!
     @IBOutlet weak var thirtyMinutes: NSButton!
     @IBOutlet weak var sixtyMinutes: NSButton!
+    @IBOutlet weak var updatedLabel: NSTextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-//        self.view.wantsLayer = true
-        self.view.layer?.backgroundColor = CGColor.clear
+        self.view.wantsLayer = true
+        self.view.layer?.backgroundColor = .clear
 //        self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
         self.view.layer?.cornerRadius = 5
         retainButton(flag: interval)
@@ -34,11 +35,12 @@ class Settings: NSViewController {
     }
     
     @IBAction func buttonClicked(_ sender: NSButton){
+        updatedLabel.isHidden = false
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         appDelegate.weatherInterval(interval: sender.tag)
         interval = sender.tag
         
-        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
         
     }
     
@@ -46,6 +48,12 @@ class Settings: NSViewController {
     {
         let temp = self.view.viewWithTag(flag) as? NSButton
         temp?.state = .on
+    }
+    
+    @objc func dismissLabel()
+    {
+        updatedLabel.isHidden = true
+        
     }
     
     

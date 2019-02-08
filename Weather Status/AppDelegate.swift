@@ -40,10 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations[locations.count - 1]
-        Location.instance.latitude = currentLocation.coordinate.latitude
-        Location.instance.longitude = currentLocation.coordinate.longitude
-        downloadWeatherData()
+        if CLLocationManager.authorizationStatus() == .authorizedAlways
+        {
+            currentLocation = locations[locations.count - 1]
+            Location.instance.latitude = currentLocation.coordinate.latitude
+            Location.instance.longitude = currentLocation.coordinate.longitude
+            downloadWeatherData()
+            
+            
+        }
+
     }
     
     func weatherInterval(interval : Int)
@@ -58,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
-            self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)°"
+            self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)"
             
             WeatherService.instance.downloadForecast(completed: {
                 NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
