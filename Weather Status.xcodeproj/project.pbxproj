@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E03AD37220D5E2F0094A018 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03AD36220D5E2F0094A018 /* Settings.swift */; };
 		4E165FF922099808002DEBB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E165FF822099808002DEBB4 /* Alamofire.framework */; };
 		4E165FFD22099A43002DEBB4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E165FFC22099A43002DEBB4 /* WeatherService.swift */; };
 		4E1660042209B707002DEBB4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1660032209B707002DEBB4 /* CurrentWeather.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E03AD36220D5E2F0094A018 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4E165FF822099808002DEBB4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		4E165FFC22099A43002DEBB4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		4E1660032209B707002DEBB4 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				4EA69A4422098065004F1AF3 /* WeatherCell.swift */,
 				4EDB4AFB220AB73D00420D5C /* Info.swift */,
+				4E03AD36220D5E2F0094A018 /* Settings.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */,
 				4E1660042209B707002DEBB4 /* CurrentWeather.swift in Sources */,
 				4E16600B2209E827002DEBB4 /* NSDate.swift in Sources */,
+				4E03AD37220D5E2F0094A018 /* Settings.swift in Sources */,
 				4EA69A3D22097FCE004F1AF3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

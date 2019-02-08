@@ -801,22 +801,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3zu-XS-Li4">
-                                <rect key="frame" x="368" y="0.0" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="BxB-r5-r07"/>
-                                    <constraint firstAttribute="width" constant="32" id="lwM-xB-kwr"/>
-                                </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarGetInfoTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="KnU-9R-Guv">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="contentTintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="VXM-qi-1sv"/>
-                                    <segue destination="CcI-zZ-HkC" kind="popover" popoverAnchorView="3zu-XS-Li4" popoverBehavior="t" preferredEdge="maxX" id="fal-2c-Sxp"/>
-                                </connections>
-                            </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="unt-Bd-Vid">
                                 <rect key="frame" x="373" y="372" width="22" height="18"/>
                                 <constraints>
@@ -873,7 +857,7 @@ AAAAAAEGA
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="IG2-Bl-su9">
-                                <rect key="frame" x="5" y="5" width="24" height="24"/>
+                                <rect key="frame" x="7" y="8" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="IOi-ET-iWr"/>
                                     <constraint firstAttribute="width" constant="24" id="NEb-jR-gj7"/>
@@ -887,9 +871,12 @@ AAAAAAEGA
                                     <action selector="farenheitButtonClciked:" target="XfG-lQ-9wD" id="f8V-qO-kQn"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-ZJ-kjj">
-                                <rect key="frame" x="5" y="5" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-ZJ-kjj">
+                                <rect key="frame" x="7" y="8" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="iDX-ah-3tV"/>
+                                    <constraint firstAttribute="width" constant="24" id="qtv-vE-nvi"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="celsius" imagePosition="overlaps" alignment="center" controlSize="small" state="on" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="9YX-PE-XJV">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="14" name="AvenirNext-Regular"/>
@@ -899,24 +886,42 @@ AAAAAAEGA
                                     <action selector="celsiusButtonClicked:" target="XfG-lQ-9wD" id="7iW-S3-ktm"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="uOl-RJ-7JV">
+                                <rect key="frame" x="371" y="7" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="9vq-kU-kkP"/>
+                                    <constraint firstAttribute="width" constant="22" id="TT0-rW-Bps"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icons8-settings-25" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2eA-Uk-HiG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="j6F-Bq-I5o"/>
+                                    <segue destination="ZdB-CK-r0b" kind="popover" popoverAnchorView="uOl-RJ-7JV" popoverBehavior="t" preferredEdge="maxX" id="Lkc-nc-wkT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jBE-ZJ-kjj" secondAttribute="bottom" constant="8" id="0Go-VH-6ML"/>
                             <constraint firstItem="unt-Bd-Vid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="4o6-Aq-TNI"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="5" id="5xL-HY-Vah"/>
+                            <constraint firstItem="jBE-ZJ-kjj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="B5z-Gs-jDy"/>
                             <constraint firstAttribute="trailing" secondItem="fwY-D8-kak" secondAttribute="trailing" constant="20" id="C0t-qO-wHA"/>
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
+                            <constraint firstAttribute="bottom" secondItem="uOl-RJ-7JV" secondAttribute="bottom" constant="7" id="Ift-jC-mKc"/>
+                            <constraint firstAttribute="trailing" secondItem="uOl-RJ-7JV" secondAttribute="trailing" constant="7" id="Iz1-22-kIM"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="RBJ-Ve-xIE"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
-                            <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="5" id="Zsz-iU-2NY"/>
+                            <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="8" id="Zsz-iU-2NY"/>
                             <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="5" id="hNQ-dD-IS9"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
-                            <constraint firstAttribute="bottom" secondItem="3zu-XS-Li4" secondAttribute="bottom" id="o9u-x5-rby"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="pdX-G3-CzB"/>
-                            <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="5" id="qRg-qq-6pf"/>
-                            <constraint firstAttribute="trailing" secondItem="3zu-XS-Li4" secondAttribute="trailing" id="wIp-eZ-w1I"/>
+                            <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="qRg-qq-6pf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -945,7 +950,7 @@ AAAAAAEGA
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
-                                <rect key="frame" x="91" y="185" width="39" height="42"/>
+                                <rect key="frame" x="91" y="194" width="39" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
                                     <font key="font" size="34" name="ZapfDingbatsITC"/>
@@ -1003,7 +1008,142 @@ AAAAAAEGA
                 </viewController>
                 <customObject id="fGZ-ru-T8Q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="391"/>
+            <point key="canvasLocation" x="771" y="377"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="WwO-IV-SNI">
+            <objects>
+                <viewController id="ZdB-CK-r0b" customClass="Settings" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="gLE-SL-9Dw">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vd5-1r-20i">
+                                <rect key="frame" x="18" y="205" width="114" height="25"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Refresh Interval" id="amy-Wa-Cw1">
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qs-W9-l07">
+                                <rect key="frame" x="45" y="20" width="61" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="wPp-Cw-bby">
+                                        <rect key="frame" x="-1" y="159" width="54" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="1 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="oYT-0k-S4O">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="zyN-XM-iVw"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="5qk-HT-tc6">
+                                        <rect key="frame" x="-1" y="127" width="56" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="5 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="LY3-e9-eEV">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="51H-Ta-cfU"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="fDk-Ku-woz">
+                                        <rect key="frame" x="-1" y="95" width="62" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="10 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="c2U-UW-pVA">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="Iki-bi-N9F"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="BKV-06-xhQ">
+                                        <rect key="frame" x="-1" y="63" width="62" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="15 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UzI-Ib-bb1">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="4O4-ym-HVp"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="30" translatesAutoresizingMaskIntoConstraints="NO" id="Pkb-qg-ede">
+                                        <rect key="frame" x="-1" y="31" width="64" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="30 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="DzA-2v-7XK">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="kbf-9f-NeL"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="60" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-yD-4wD">
+                                        <rect key="frame" x="-1" y="-1" width="64" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="60 min" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Kex-hk-CAV">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="buttonClicked:" target="ZdB-CK-r0b" id="UQ8-Tn-nNf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3zu-XS-Li4">
+                                <rect key="frame" x="122" y="0.0" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="AXL-gS-BpH"/>
+                                    <constraint firstAttribute="height" constant="28" id="zKD-lK-kio"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarGetInfoTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="KnU-9R-Guv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="VXM-qi-1sv"/>
+                                    <segue destination="CcI-zZ-HkC" kind="modal" id="GDZ-Tp-PwB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vd5-1r-20i" firstAttribute="centerX" secondItem="gLE-SL-9Dw" secondAttribute="centerX" id="8vD-Ke-VkZ"/>
+                            <constraint firstItem="vd5-1r-20i" firstAttribute="top" secondItem="gLE-SL-9Dw" secondAttribute="top" constant="20" id="CA8-x5-zKM"/>
+                            <constraint firstAttribute="bottom" secondItem="3zu-XS-Li4" secondAttribute="bottom" id="Ycx-ug-Hhz"/>
+                            <constraint firstAttribute="trailing" secondItem="3zu-XS-Li4" secondAttribute="trailing" id="mU8-el-Oi7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fifteenMinutes" destination="BKV-06-xhQ" id="VX0-c3-09U"/>
+                        <outlet property="fiveMinutes" destination="5qk-HT-tc6" id="fly-h2-bI3"/>
+                        <outlet property="oneMinute" destination="wPp-Cw-bby" id="Hn3-Oq-hS7"/>
+                        <outlet property="sixtyMinutes" destination="9BX-yD-4wD" id="i0x-wX-Ca4"/>
+                        <outlet property="tenMinutes" destination="fDk-Ku-woz" id="sOa-Jc-mZL"/>
+                        <outlet property="thirtyMinutes" destination="Pkb-qg-ede" id="0wz-UN-Swn"/>
+                    </connections>
+                </viewController>
+                <customObject id="EdJ-EN-22X" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="0.0"/>
         </scene>
     </scenes>
     <resources>
@@ -1013,5 +1153,6 @@ AAAAAAEGA
         <image name="celsius" width="24" height="24"/>
         <image name="clear" width="512" height="512"/>
         <image name="farenheit" width="24" height="24"/>
+        <image name="icons8-settings-25" width="18.75" height="18.75"/>
     </resources>
 </document>

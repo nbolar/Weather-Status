@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
+    
  
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -31,8 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         statusItem.button?.title = "--°"
         statusItem.button?.action = #selector(AppDelegate.displayPopUp(_:))
         
-        let updateWeatherData = Timer.scheduledTimer(timeInterval: 60*15, target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
-        updateWeatherData.tolerance = 60
+        weatherInterval(interval: 15)
+        
+        
+
         
     }
     
@@ -43,10 +46,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         downloadWeatherData()
     }
     
+    func weatherInterval(interval : Int)
+    {
+        
+        let updateWeatherData = Timer.scheduledTimer(timeInterval: TimeInterval(60*interval), target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
+        updateWeatherData.tolerance = 60
+        
+    }
+    
     @objc func downloadWeatherData(){
-        
-//        print(unit1, unit2)
-        
+
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
             self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)°"

@@ -56,7 +56,7 @@ class WeatherVC: NSViewController {
         let weather = WeatherService.instance.currentWeather
         dateLabel.stringValue = weather.date
         locationLabel.stringValue = weather.cityName
-        tempLabel.stringValue = "\(weather.currentTemp)°"
+        tempLabel.stringValue = "\(weather.currentTemp)"
         weatherConditionLabel.stringValue = weather.weatherType
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
         collectionView.reloadData()

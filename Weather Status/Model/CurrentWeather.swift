@@ -15,7 +15,7 @@ class CurrentWeather {
     fileprivate var _cityName: String!
     fileprivate var _date: String!
     fileprivate var _weatherType: String!
-    fileprivate var _currentTemp: Int!
+    fileprivate var _currentTemp: String!
     
     var cityName: String{
         get{
@@ -45,9 +45,9 @@ class CurrentWeather {
         }
     }
     
-    var currentTemp: Int{
+    var currentTemp: String{
         get{
-            return _currentTemp ?? 0
+            return _currentTemp ?? "--"
         }
         set {
             _currentTemp = newValue
@@ -62,7 +62,7 @@ class CurrentWeather {
         
         currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
         currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.capitalized
-        currentWeather.currentTemp = swiftyJson["main"]["temp"].intValue
+        currentWeather.currentTemp = "\(swiftyJson["main"]["temp"].intValue)°"
         
         
         
