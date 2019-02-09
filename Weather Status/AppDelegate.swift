@@ -46,11 +46,41 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
             Location.instance.latitude = currentLocation.coordinate.latitude
             Location.instance.longitude = currentLocation.coordinate.longitude
             downloadWeatherData()
-            
-            
         }
 
     }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        _ = dialogOKCancel(question: "Please Allow Location Access to Weather Status", text: "Enable access in Location Services in System Preferences and restart the app.")
+
+        
+    }
+    
+    func dialogOKCancel(question: String, text: String) -> Bool{
+        let alert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: "System Preferences")
+        alert.buttons[1].target = self
+        alert.buttons[1].action = #selector(openPrefs)
+        alert.buttons[1].highlight(true)
+        return alert.runModal() == .alertFirstButtonReturn
+        
+        
+    }
+    
+    @objc func openPrefs()
+    {
+
+        let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_LocationServices")!
+        NSWorkspace.shared.open(url)
+        NSApp.terminate(nil)
+
+
+    }
+    
+    
     
     func weatherInterval(interval : Int)
     {
@@ -83,7 +113,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         popoverView.show(relativeTo: statusItem.button!.bounds, of: statusItem.button!, preferredEdge: .minY)
         
     }
-
 
 }
 

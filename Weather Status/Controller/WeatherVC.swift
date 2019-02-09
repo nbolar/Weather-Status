@@ -8,6 +8,7 @@
 
 import Cocoa
 import Alamofire
+import Foundation
 
 
 class WeatherVC: NSViewController {
@@ -25,6 +26,7 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var celsius: NSButton!
     @IBOutlet weak var swipeLabel: NSTextField!
     var type:String!
+    static let instance = WeatherVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
