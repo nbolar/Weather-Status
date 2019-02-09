@@ -9,9 +9,10 @@
 import Cocoa
 import Alamofire
 import Foundation
+import CoreLocation
 
 
-class WeatherVC: NSViewController {
+class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
     @IBOutlet weak var dateLabel: NSTextField!
@@ -24,7 +25,8 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var refreshed: NSTextField!
     @IBOutlet weak var farenheit: NSButton!
     @IBOutlet weak var celsius: NSButton!
-    @IBOutlet weak var swipeLabel: NSTextField!
+    @IBOutlet weak var gestureImage: NSImageView!
+    
     var type:String!
     static let instance = WeatherVC()
     
@@ -49,7 +51,7 @@ class WeatherVC: NSViewController {
     override func viewDidAppear() {
         NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.dataDownloadedNotif(_:)), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
         self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
-        swipeLabel.isHidden = false
+        check1 = 1
         updateUI()
     }
     
@@ -65,15 +67,11 @@ class WeatherVC: NSViewController {
         
     }
     
-    @objc func dismissSwipe(){
-        swipeLabel.isHidden = true
-        
-    }
+
     
     
     func updateUI() {
         
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.dismissSwipe), userInfo: nil, repeats: false)
         let weather = WeatherService.instance.currentWeather
         
         if fahrenheit == 1
@@ -93,6 +91,17 @@ class WeatherVC: NSViewController {
         tempLabel.stringValue = "\(weather.currentTemp)\(type ?? "--")"
         weatherConditionLabel.stringValue = weather.weatherType
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
+        
+        if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways
+        {
+            check2 = 1
+            gestureImage.isHidden = false
+            gestureImage.layer?.backgroundColor = CGColor.init(gray: 0.1, alpha: 0.3)
+            gestureImage.layer?.cornerRadius = 5
+            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
+        }
+
+        
         collectionView.reloadData()
     }
     
@@ -101,7 +110,8 @@ class WeatherVC: NSViewController {
         
         units = 1
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
-        appDelegate.downloadWeatherData()
+//        appDelegate.downloadWeatherData()
+        appDelegate.locationManager.startUpdatingLocation()
         updateUI()
         farenheit.isHidden = false
         celsius.isHidden = true
@@ -114,7 +124,8 @@ class WeatherVC: NSViewController {
         
         units = 2
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
-        appDelegate.downloadWeatherData()
+//        appDelegate.downloadWeatherData()
+        appDelegate.locationManager.startUpdatingLocation()
         updateUI()
         farenheit.isHidden = true
         celsius.isHidden = false
@@ -146,6 +157,10 @@ class WeatherVC: NSViewController {
             appDelegate.locationManager.startUpdatingLocation()
             refreshed.isHidden = true
             updateUI()
+        }
+        if gestureImage.isHidden == false{
+            
+            gestureImage.isHidden = true
         }
     }
     

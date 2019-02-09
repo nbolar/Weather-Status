@@ -7,8 +7,9 @@
 //
 
 import Cocoa
+import CoreLocation
 
-class Settings: NSViewController {
+class Settings: NSViewController,CLLocationManagerDelegate {
     
     var value: Int!
     var compare: Int!
@@ -29,8 +30,9 @@ class Settings: NSViewController {
         self.view.layer?.backgroundColor = .clear
 //        self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
         self.view.layer?.cornerRadius = 5
+//        oneMinute.layer?.backgroundColor = CGColor.init(gray: 0.1, alpha: 0.2)
         retainButton(flag: interval)
-//        (oneMinute.cell! as! NSButtonCell).backgroundColor = .init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
+//        (oneMinute.cell! as! NSButtonCell).backgroundColor = NSColor.init(white: 0.1, alpha: 0.0)
         
     }
     
@@ -40,7 +42,21 @@ class Settings: NSViewController {
         appDelegate.weatherInterval(interval: sender.tag)
         interval = sender.tag
         
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
+        if CLLocationManager.authorizationStatus() == .authorizedAlways{
+            
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
+        }else if CLLocationManager.authorizationStatus() == .denied{
+            
+            Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
+        }else if CLLocationManager.authorizationStatus() == .notDetermined{
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
+        }
+        
+        
+        
+    }
+    @IBAction func infoButtonClicked(_ sender: Any) {
+        self.dismiss(self)
         
     }
     
@@ -53,8 +69,11 @@ class Settings: NSViewController {
     @objc func dismissLabel()
     {
         updatedLabel.isHidden = true
+        self.dismiss(self)
+
         
     }
+    
     
     
 }

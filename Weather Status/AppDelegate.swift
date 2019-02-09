@@ -51,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         _ = dialogOKCancel(question: "Please Allow Location Access to Weather Status", text: "Enable access in Location Services in System Preferences and restart the app.")
+        WeatherService.instance.currentWeather.cityName = "Please Provide Location Access in System Preferences"
 
         
     }
@@ -64,7 +65,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         alert.addButton(withTitle: "System Preferences")
         alert.buttons[1].target = self
         alert.buttons[1].action = #selector(openPrefs)
-        alert.buttons[1].highlight(true)
         return alert.runModal() == .alertFirstButtonReturn
         
         
@@ -84,9 +84,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     
     func weatherInterval(interval : Int)
     {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways{
+            let updateWeatherData = Timer.scheduledTimer(timeInterval: TimeInterval(60*interval), target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
+            updateWeatherData.tolerance = 60
+            
+        }else{
+            
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.waitTime), userInfo: nil, repeats: false)
+
+        }
+
         
-        let updateWeatherData = Timer.scheduledTimer(timeInterval: TimeInterval(60*interval), target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
-        updateWeatherData.tolerance = 60
+    }
+    
+    @objc func waitTime(){
+
+        locationManager.startUpdatingLocation()
         
     }
     
@@ -94,7 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
-            self.statusItem.button?.title = "             \(WeatherService.instance.currentWeather.currentTemp)"
+            self.statusItem.button?.title = "               \(WeatherService.instance.currentWeather.currentTemp)"
             
             WeatherService.instance.downloadForecast(completed: {
                 NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
