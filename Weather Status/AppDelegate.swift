@@ -107,7 +107,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
-            self.statusItem.button?.title = "              \(WeatherService.instance.currentWeather.currentTemp)"
+            self.statusItem.button?.imagePosition = .imageLeft
+            self.statusItem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)"
             
             WeatherService.instance.downloadForecast(completed: {
                 NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
