@@ -29,6 +29,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
     var type:String!
     static let instance = WeatherVC()
+    var timerTest : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,10 +137,15 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     }
     @IBAction func refreshButtonClicked(_ sender: Any) {
         
+        
         refreshed.isHidden = false
-        weatherImage.image = NSImage(named: "icons8-update-100")
+        
         tempLabel.stringValue = "--"
         weatherConditionLabel.stringValue = "--"
+        
+        if timerTest == nil {
+            timerTest = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.wait), userInfo: nil, repeats: true)
+        }
 
         
         Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
@@ -157,11 +163,23 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             appDelegate.locationManager.startUpdatingLocation()
             refreshed.isHidden = true
             updateUI()
+            
+            if timerTest != nil {
+                timerTest?.invalidate()
+                timerTest = nil
+            }
+            
         }
         if gestureImage.isHidden == false{
             
             gestureImage.isHidden = true
         }
+    }
+    
+    @objc func wait(){
+        weatherImage.image = NSImage(named: "image\(Int.random(in: 1...11))")
+    
+    
     }
     
 

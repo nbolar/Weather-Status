@@ -1151,7 +1151,7 @@ AAAAAAEGA
                                 <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="infoButtonClicked:" target="ZdB-CK-r0b" id="hKk-2X-pFc"/>
-                                    <segue destination="CcI-zZ-HkC" kind="show" id="Wew-QW-Lsx"/>
+                                    <segue destination="CcI-zZ-HkC" kind="modal" id="Wew-QW-Lsx"/>
                                 </connections>
                             </button>
                         </subviews>
