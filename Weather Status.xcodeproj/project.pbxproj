@@ -23,6 +23,7 @@
 		4EB5B8EF220882690029104F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB5B8EE220882690029104F /* Assets.xcassets */; };
 		4EDB4AFC220AB73D00420D5C /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB4AFB220AB73D00420D5C /* Info.swift */; };
 		4EDB4B03220B119100420D5C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB4B02220B119100420D5C /* Location.swift */; };
+		4EE9E958221175B200142B06 /* RTProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E957221175B200142B06 /* RTProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4EDB4AFB220AB73D00420D5C /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		4EDB4B01220AD2FE00420D5C /* Weather Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Status.entitlements"; sourceTree = "<group>"; };
 		4EDB4B02220B119100420D5C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4EE9E957221175B200142B06 /* RTProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		4EB5B8DE220882680029104F = {
 			isa = PBXGroup;
 			children = (
+				4EE9E957221175B200142B06 /* RTProgressBar.swift */,
 				4E1660052209BAD7002DEBB4 /* SwiftyJSON.framework */,
 				4E165FF822099808002DEBB4 /* Alamofire.framework */,
 				4EB5B8E9220882680029104F /* Weather Status */,
@@ -264,6 +267,7 @@
 				4E1660082209E51E002DEBB4 /* Forecast.swift in Sources */,
 				4EDB4AFC220AB73D00420D5C /* Info.swift in Sources */,
 				4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */,
+				4EE9E958221175B200142B06 /* RTProgressBar.swift in Sources */,
 				4EB5B8EB220882680029104F /* AppDelegate.swift in Sources */,
 				4E1660042209B707002DEBB4 /* CurrentWeather.swift in Sources */,
 				4E16600B2209E827002DEBB4 /* NSDate.swift in Sources */,

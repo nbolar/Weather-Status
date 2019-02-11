@@ -12,6 +12,7 @@ import Foundation
 import CoreLocation
 
 
+
 class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
@@ -26,10 +27,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @IBOutlet weak var farenheit: NSButton!
     @IBOutlet weak var celsius: NSButton!
     @IBOutlet weak var gestureImage: NSImageView!
+    @IBOutlet weak var progressBar: RTProgressBar!
     
     var type:String!
     static let instance = WeatherVC()
     var timerTest : Timer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,6 +142,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         
         
         refreshed.isHidden = false
+        progressBar.color = NSColor.white
+        progressBar.backgroundColor = NSColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
+//        progressBar.animationColor = NSColor.white
+        progressBar.alphaValue = 1
+        progressBar.progress = 0
+        startProgressIteration()
         
         tempLabel.stringValue = "--"
         weatherConditionLabel.stringValue = "--"
@@ -148,7 +157,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         }
 
         
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
     }
     
     @IBAction func quitButtonClicked(_ sender: Any) {
@@ -189,9 +198,48 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         // Update the view, if already loaded.
         }
     }
+    // MARK: - dealing with progress
+    fileprivate func startProgressIteration() {
+        if progressBar.indeterminate {
+            progressBar.animating = true
+        } else {
+            let value = Double(45)
+            let delay = Double(1)
+            appendProgress(value, afterDelay: delay)
+        }
+    }
+    
+    fileprivate func appendProgress(_ progress: Double, afterDelay delay: TimeInterval) {
+        // calculate time
+        let interval = Int64(UInt64(delay) * NSEC_PER_SEC)
+        let time = DispatchTime.now() + Double(interval) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            self.appendProgress(progress)
+        }
+    }
+    
+    fileprivate func appendProgress(_ progress: Double) {
+        progressBar.append(progress, animated: true)
+        if progressBar.progress >= 100 {
+            NSAnimationContext.runAnimationGroup({ context in
+                self.progressBar.animator().alphaValue = 0
+                //                self..isEnabled = true
+                context.duration = 0
+            }, completionHandler: nil)
+        } else {
+            startProgressIteration()
+        }
+        
+    }
+    
 
 
 }
+
+
+
+
+
 
 extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout{
     

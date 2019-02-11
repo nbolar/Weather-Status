@@ -23,8 +23,8 @@ var fahrenheit = 0
 var check1 = 0
 var check2 = 0
 
-let API_KEY1 = "&appid=YOURKEY" //OpenWeatherMap API Key
-let API_KEY2 = "YOURKEY" //DarkSky API Key
+let API_KEY1 = "&appid=691657a05faabbd6ef5736fbcdcf951f" //OpenWeatherMap API Key
+let API_KEY2 = "47c545315eff2221c6346d3ee071083d" //DarkSky API Key
 let API_URL_CURRENT_WEATHER_si = "https://api.openweathermap.org/data/2.5/weather?lat=\(LAT)&lon=\(LONG)&units=metric\(API_KEY1)"
 let API_URL_FORECAST_si  = "https://api.darksky.net/forecast/\(API_KEY2)/\(LAT),\(LONG)?units=si"
 

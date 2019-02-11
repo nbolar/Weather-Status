@@ -917,6 +917,12 @@ AAAAAAEGA
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon-9-two-fingers-swipe-right" id="wZm-0K-OMd"/>
                                 <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="K5L-be-jEe" customClass="RTProgressBar" customModule="Weather_Status" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="W0C-jT-IkG"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jBE-ZJ-kjj" secondAttribute="bottom" constant="8" id="0Go-VH-6ML"/>
@@ -927,13 +933,16 @@ AAAAAAEGA
                             <constraint firstAttribute="trailing" secondItem="NrH-G2-yfC" secondAttribute="trailing" constant="20" id="Clt-RU-oag"/>
                             <constraint firstAttribute="bottom" secondItem="uOl-RJ-7JV" secondAttribute="bottom" constant="7" id="Ift-jC-mKc"/>
                             <constraint firstAttribute="trailing" secondItem="uOl-RJ-7JV" secondAttribute="trailing" constant="5" id="Iz1-22-kIM"/>
+                            <constraint firstItem="K5L-be-jEe" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="L0F-Ya-gIr"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="RBJ-Ve-xIE"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
                             <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="8" id="Zsz-iU-2NY"/>
                             <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="3" id="hNQ-dD-IS9"/>
+                            <constraint firstAttribute="trailing" secondItem="K5L-be-jEe" secondAttribute="trailing" id="hxJ-tH-cWu"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
+                            <constraint firstAttribute="bottom" secondItem="K5L-be-jEe" secondAttribute="bottom" id="jjM-iG-83n"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="pdX-G3-CzB"/>
                             <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="qRg-qq-6pf"/>
@@ -946,6 +955,7 @@ AAAAAAEGA
                         <outlet property="farenheit" destination="IG2-Bl-su9" id="Njs-hA-FSo"/>
                         <outlet property="gestureImage" destination="non-uK-6I4" id="nxV-IY-w5u"/>
                         <outlet property="locationLabel" destination="EAz-VD-Ck8" id="2B6-6d-Koq"/>
+                        <outlet property="progressBar" destination="K5L-be-jEe" id="XDT-XA-WhH"/>
                         <outlet property="refreshButton" destination="yim-Dh-ib8" id="7pz-UP-YDw"/>
                         <outlet property="refreshed" destination="vpp-b5-zgs" id="fG6-H5-MQR"/>
                         <outlet property="tempLabel" destination="mcD-fg-t0R" id="SUv-H2-Net"/>
@@ -955,7 +965,7 @@ AAAAAAEGA
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="436.5"/>
+            <point key="canvasLocation" x="74" y="436"/>
         </scene>
         <!--Info-->
         <scene sceneID="D36-4w-6bK">
