@@ -127,7 +127,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         units = 1
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
 
-        appDelegate.locationManager.startUpdatingLocation()
+        appDelegate.downloadWeatherData()
         updateUI()
         farenheit.isHidden = false
         celsius.isHidden = true
@@ -141,7 +141,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         units = 2
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
 
-        appDelegate.locationManager.startUpdatingLocation()
+        appDelegate.downloadWeatherData()
         updateUI()
         farenheit.isHidden = true
         celsius.isHidden = false
@@ -182,7 +182,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if refreshed.isHidden == false
         {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            appDelegate.locationManager.startUpdatingLocation()
+            appDelegate.downloadWeatherData()
             refreshed.isHidden = true
             summaryLabel.isHidden = false
             updateUI()

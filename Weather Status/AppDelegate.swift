@@ -49,13 +49,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         }
 
     }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         _ = dialogOKCancel(question: "Please Allow Location Access to Weather Status", text: "Enable access in Location Services in System Preferences and restart the app.")
         WeatherService.instance.currentWeather.cityName = "Please Provide Location Access in System Preferences"
 
-        
+
     }
-    
+
     func dialogOKCancel(question: String, text: String) -> Bool{
         let alert = NSAlert()
         alert.messageText = question
@@ -66,10 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         alert.buttons[1].target = self
         alert.buttons[1].action = #selector(openPrefs)
         return alert.runModal() == .alertFirstButtonReturn
-        
-        
+
+
     }
-    
+
     @objc func openPrefs()
     {
 
