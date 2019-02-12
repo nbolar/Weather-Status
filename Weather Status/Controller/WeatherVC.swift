@@ -70,10 +70,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @objc func dataDownloadedNotif(_ notif: Notification){
         updateUI()
         
-        
     }
-    
-
     
     
     func updateUI() {
@@ -109,6 +106,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         tempLabel.stringValue = "\(weather.currentTemp)\(type ?? "--")"
         weatherConditionLabel.stringValue = weather.currentSummary
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
+
         
         if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways
         {
@@ -204,7 +202,6 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @objc func wait(){
         weatherImage.image = NSImage(named: "image\(Int.random(in: 1...11))")
     
-    
     }
     
 
@@ -214,6 +211,8 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         // Update the view, if already loaded.
         }
     }
+    
+    
     // MARK: - dealing with progress
     fileprivate func startProgressIteration() {
         if progressBar.indeterminate {
