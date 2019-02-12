@@ -90,12 +90,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            let options = ReverseGeocodeOptions(location: appDelegate.locationManager.location!)
+            let options = ReverseGeocodeOptions(location: appDelegate.currentLocation)
             _ = geocoder.geocode(options, completionHandler: { (placemarks, attribution, error) in
                 guard let placemark = placemarks?.first else {
                     return
                 }
-                self.locationLabel.stringValue = "\(placemark.qualifiedName ?? "")"
+                self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "") \(placemark.postalAddress?.country ?? "")"
             })
         }
     

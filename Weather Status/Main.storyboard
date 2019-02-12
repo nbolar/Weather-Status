@@ -923,9 +923,8 @@ AAAAAAEGA
                                     <constraint firstAttribute="height" constant="3" id="W0C-jT-IkG"/>
                                 </constraints>
                             </customView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-6o-9cj">
-                                <rect key="frame" x="34" y="348" width="313" height="45"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-6o-9cj">
+                                <rect key="frame" x="35" y="370" width="312" height="23"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="Multiline Label" id="nkg-EF-g44">
                                     <font key="font" size="13" name="AvenirNext-Regular"/>
                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -935,6 +934,7 @@ AAAAAAEGA
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jBE-ZJ-kjj" secondAttribute="bottom" constant="8" id="0Go-VH-6ML"/>
+                            <constraint firstItem="P1X-6o-9cj" firstAttribute="leading" secondItem="yim-Dh-ib8" secondAttribute="trailing" constant="8" id="0Gt-bP-580"/>
                             <constraint firstItem="unt-Bd-Vid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="4o6-Aq-TNI"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="5" id="5xL-HY-Vah"/>
                             <constraint firstItem="jBE-ZJ-kjj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="B5z-Gs-jDy"/>
@@ -948,7 +948,9 @@ AAAAAAEGA
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
                             <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="8" id="Zsz-iU-2NY"/>
+                            <constraint firstItem="P1X-6o-9cj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="7" id="c3d-9p-d1m"/>
                             <constraint firstAttribute="trailing" secondItem="unt-Bd-Vid" secondAttribute="trailing" constant="3" id="hNQ-dD-IS9"/>
+                            <constraint firstItem="unt-Bd-Vid" firstAttribute="leading" secondItem="P1X-6o-9cj" secondAttribute="trailing" constant="8" id="hWf-fp-rVn"/>
                             <constraint firstAttribute="trailing" secondItem="K5L-be-jEe" secondAttribute="trailing" id="hxJ-tH-cWu"/>
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
                             <constraint firstAttribute="bottom" secondItem="K5L-be-jEe" secondAttribute="bottom" id="jjM-iG-83n"/>

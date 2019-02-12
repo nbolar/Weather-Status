@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		230087413CED1BDD75C044157BE19F6A /* Pods-Weather Status-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41401208D309176EDDED2E34B57D38A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		46C49671C37FB46E5FC0E498CDC3C68D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		57110B1CFE5A2EFF94CF75377489C474 /* MapboxGeocoder.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65D86F3284836F06BE475A0EC88C59AD /* MBPlacemarkScope.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DD6B6C5B45E6B7ED04D033D3308AA20 /* MBPlacemarkScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */; };
+		9F2F3D8ACFC9B2ED47E82E875443494E /* MBGeocodeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */; };
+		A46063D4405346DF995DD60A63565950 /* MBGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */; };
+		A4783CE9A4B7315211ACC4C730CA1AD1 /* MapboxGeocoder.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */; };
+		AED542A4A4CA8F6D14F468984A88A900 /* Pods-Weather Status-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */; };
+		D145F3C4B5ABDC27B225B62B528F7B72 /* MBPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */; };
+		D1EB73B8C850F2D40DD47D6EAA6A0D87 /* MBRectangularRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */; };
+		D24A4C5EB1C90D20718609E0CF666150 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */; };
+		DBA00FB1C71D8DFA8701CC74F598B1CB /* MapboxGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		409D489A5A0E6105EAA6153371C8E32B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75591FE624CE3E082C1A82B78A2A7810;
+			remoteInfo = MapboxGeocoder.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocoder.swift; path = MapboxGeocoder/MBGeocoder.swift; sourceTree = "<group>"; };
+		0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxGeocoder.h; path = MapboxGeocoder/MapboxGeocoder.h; sourceTree = "<group>"; };
+		13A30EA79EE09824F7B1CCDED107B628 /* Pods-Weather Status-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Weather Status-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBRectangularRegion.swift; path = MapboxGeocoder/MBRectangularRegion.swift; sourceTree = "<group>"; };
+		317C518117B4B5C29AD2C1B9F3E9C3F4 /* MapboxGeocoder.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxGeocoder.swift.modulemap; sourceTree = "<group>"; };
+		528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocodeOptions.swift; path = MapboxGeocoder/MBGeocodeOptions.swift; sourceTree = "<group>"; };
+		52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-umbrella.h"; sourceTree = "<group>"; };
+		53D1F8863635593AD317A87672D7964D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemark.swift; path = MapboxGeocoder/MBPlacemark.swift; sourceTree = "<group>"; };
+		6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Weather Status-umbrella.h"; sourceTree = "<group>"; };
+		7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemarkScope.swift; path = MapboxGeocoder/MBPlacemarkScope.swift; sourceTree = "<group>"; };
+		754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = MapboxGeocoder/CoreLocation.swift; sourceTree = "<group>"; };
+		8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxGeocoder.swift-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Weather_Status.framework; path = "Pods-Weather Status.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxGeocoder.framework; path = MapboxGeocoder.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A442E359D7E3912E7A50B4FC1C2F9653 /* MapboxGeocoder.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-prefix.pch"; sourceTree = "<group>"; };
+		A6A16E55D9420874EDC8FF1D16D6819B /* Pods-Weather Status-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Weather Status-acknowledgements.plist"; sourceTree = "<group>"; };
+		B0DD4FF3F28EF843E3D2FAF11B9393B2 /* Pods-Weather Status-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weather Status-resources.sh"; sourceTree = "<group>"; };
+		B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weather Status.debug.xcconfig"; sourceTree = "<group>"; };
+		B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxGeocoder.swift.xcconfig; sourceTree = "<group>"; };
+		BC1EE62EE25F96A5454F6633368EB22D /* Pods-Weather Status.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Weather Status.modulemap"; sourceTree = "<group>"; };
+		C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weather Status.release.xcconfig"; sourceTree = "<group>"; };
+		CBB79203A33B7149DBBB44D8E2421FD9 /* Pods-Weather Status-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weather Status-frameworks.sh"; sourceTree = "<group>"; };
+		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E799BA2370CAEC6BEA8F60715530B6E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Weather Status-dummy.m"; sourceTree = "<group>"; };
+		FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBPlacemarkScope.h; path = MapboxGeocoder/MBPlacemarkScope.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BB5F187825A555C281BECC9207F4393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C49671C37FB46E5FC0E498CDC3C68D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B02AB2E4FA65E55639190175F9C569A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41401208D309176EDDED2E34B57D38A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16014A2CB68A6C558F00B74F9DAF351D /* Pods-Weather Status */ = {
+			isa = PBXGroup;
+			children = (
+				E799BA2370CAEC6BEA8F60715530B6E5 /* Info.plist */,
+				BC1EE62EE25F96A5454F6633368EB22D /* Pods-Weather Status.modulemap */,
+				13A30EA79EE09824F7B1CCDED107B628 /* Pods-Weather Status-acknowledgements.markdown */,
+				A6A16E55D9420874EDC8FF1D16D6819B /* Pods-Weather Status-acknowledgements.plist */,
+				F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */,
+				CBB79203A33B7149DBBB44D8E2421FD9 /* Pods-Weather Status-frameworks.sh */,
+				B0DD4FF3F28EF843E3D2FAF11B9393B2 /* Pods-Weather Status-resources.sh */,
+				6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */,
+				B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */,
+				C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */,
+			);
+			name = "Pods-Weather Status";
+			path = "Target Support Files/Pods-Weather Status";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA7AC8429882A95AA0810A9DCDED54FF /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BA700C4E104C662DE4ACA56D7FAF8D7 /* MapboxGeocoder.swift */ = {
+			isa = PBXGroup;
+			children = (
+				754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */,
+				0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */,
+				528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */,
+				025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */,
+				5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */,
+				FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */,
+				7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */,
+				2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */,
+				D9D1373976B2C8261844E73B43D72182 /* Support Files */,
+			);
+			name = MapboxGeocoder.swift;
+			path = MapboxGeocoder.swift;
+			sourceTree = "<group>";
+		};
+		41D951D11C29B93415623647D2B0F6F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BA700C4E104C662DE4ACA56D7FAF8D7 /* MapboxGeocoder.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */,
+				9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				41D951D11C29B93415623647D2B0F6F6 /* Pods */,
+				4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */,
+				7F245DF56FCE974AF8EE6F39E5509BC7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F245DF56FCE974AF8EE6F39E5509BC7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16014A2CB68A6C558F00B74F9DAF351D /* Pods-Weather Status */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D9D1373976B2C8261844E73B43D72182 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				53D1F8863635593AD317A87672D7964D /* Info.plist */,
+				317C518117B4B5C29AD2C1B9F3E9C3F4 /* MapboxGeocoder.swift.modulemap */,
+				B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */,
+				8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */,
+				A442E359D7E3912E7A50B4FC1C2F9653 /* MapboxGeocoder.swift-prefix.pch */,
+				52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MapboxGeocoder.swift";
+			sourceTree = "<group>";
+		};
+		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A0097462674F52339D368AB060CD723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230087413CED1BDD75C044157BE19F6A /* Pods-Weather Status-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E96DC263953CFB04399E5A3865C7EED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA00FB1C71D8DFA8701CC74F598B1CB /* MapboxGeocoder.h in Headers */,
+				57110B1CFE5A2EFF94CF75377489C474 /* MapboxGeocoder.swift-umbrella.h in Headers */,
+				65D86F3284836F06BE475A0EC88C59AD /* MBPlacemarkScope.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		356A3297D402E4DC8CDA5BCD86B61530 /* Pods-Weather Status */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8FF63770794B66617BD6D3CC6ABFFA9 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */;
+			buildPhases = (
+				D6172EDEB21FEDC96B3D8798272E571F /* Sources */,
+				1BB5F187825A555C281BECC9207F4393 /* Frameworks */,
+				3A0097462674F52339D368AB060CD723 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DF84B6578906738222D05E6D44EB69 /* PBXTargetDependency */,
+			);
+			name = "Pods-Weather Status";
+			productName = "Pods-Weather Status";
+			productReference = 9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC4693BC85A65A03A997989952001F8 /* Build configuration list for PBXNativeTarget "MapboxGeocoder.swift" */;
+			buildPhases = (
+				B63612CBB5B69776E70BF0B654F99947 /* Sources */,
+				B02AB2E4FA65E55639190175F9C569A0 /* Frameworks */,
+				6E96DC263953CFB04399E5A3865C7EED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapboxGeocoder.swift;
+			productName = MapboxGeocoder.swift;
+			productReference = A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */,
+				356A3297D402E4DC8CDA5BCD86B61530 /* Pods-Weather Status */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B63612CBB5B69776E70BF0B654F99947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24A4C5EB1C90D20718609E0CF666150 /* CoreLocation.swift in Sources */,
+				A4783CE9A4B7315211ACC4C730CA1AD1 /* MapboxGeocoder.swift-dummy.m in Sources */,
+				9F2F3D8ACFC9B2ED47E82E875443494E /* MBGeocodeOptions.swift in Sources */,
+				A46063D4405346DF995DD60A63565950 /* MBGeocoder.swift in Sources */,
+				D145F3C4B5ABDC27B225B62B528F7B72 /* MBPlacemark.swift in Sources */,
+				7DD6B6C5B45E6B7ED04D033D3308AA20 /* MBPlacemarkScope.swift in Sources */,
+				D1EB73B8C850F2D40DD47D6EAA6A0D87 /* MBRectangularRegion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6172EDEB21FEDC96B3D8798272E571F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED542A4A4CA8F6D14F468984A88A900 /* Pods-Weather Status-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28DF84B6578906738222D05E6D44EB69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapboxGeocoder.swift;
+			target = 75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */;
+			targetProxy = 409D489A5A0E6105EAA6153371C8E32B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C319FE8FEF78C160E1BFEB270E25F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		339917DB174FBDD42AF117D825E3EA5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		733276CB7E522D1DFE4049081356D9FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		822B7102BBE44F4B911960928BE7992D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8549D38A761BA89656858D2B19947A7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapboxGeocoder.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift.modulemap";
+				PRODUCT_MODULE_NAME = MapboxGeocoder;
+				PRODUCT_NAME = MapboxGeocoder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F4B1AA671447E4770D8EA9FE49994D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapboxGeocoder.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift.modulemap";
+				PRODUCT_MODULE_NAME = MapboxGeocoder;
+				PRODUCT_NAME = MapboxGeocoder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				822B7102BBE44F4B911960928BE7992D /* Debug */,
+				1C319FE8FEF78C160E1BFEB270E25F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC4693BC85A65A03A997989952001F8 /* Build configuration list for PBXNativeTarget "MapboxGeocoder.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8549D38A761BA89656858D2B19947A7F /* Debug */,
+				8F4B1AA671447E4770D8EA9FE49994D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8FF63770794B66617BD6D3CC6ABFFA9 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339917DB174FBDD42AF117D825E3EA5C /* Debug */,
+				733276CB7E522D1DFE4049081356D9FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
