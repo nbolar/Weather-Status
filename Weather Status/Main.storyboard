@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -689,7 +689,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="71" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-G2-yfC">
-                                <rect key="frame" x="20" y="189" width="340" height="171"/>
+                                <rect key="frame" x="20" y="199" width="340" height="171"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-u9-0ij">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="171"/>
@@ -773,7 +773,7 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-D8-kak">
-                                <rect key="frame" x="20" y="19" width="340" height="150"/>
+                                <rect key="frame" x="20" y="24" width="340" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="90t-2e-uw0">
                                     <rect key="frame" x="0.0" y="0.0" width="340" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -923,6 +923,15 @@ AAAAAAEGA
                                     <constraint firstAttribute="height" constant="3" id="W0C-jT-IkG"/>
                                 </constraints>
                             </customView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-6o-9cj">
+                                <rect key="frame" x="18" y="169" width="364" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Multiline Label" id="nkg-EF-g44">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jBE-ZJ-kjj" secondAttribute="bottom" constant="8" id="0Go-VH-6ML"/>
@@ -935,7 +944,7 @@ AAAAAAEGA
                             <constraint firstAttribute="trailing" secondItem="uOl-RJ-7JV" secondAttribute="trailing" constant="5" id="Iz1-22-kIM"/>
                             <constraint firstItem="K5L-be-jEe" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="L0F-Ya-gIr"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="RBJ-Ve-xIE"/>
-                            <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="20" id="Shh-gH-ais"/>
+                            <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="25" id="Shh-gH-ais"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
                             <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="8" id="Zsz-iU-2NY"/>
@@ -944,7 +953,7 @@ AAAAAAEGA
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
                             <constraint firstAttribute="bottom" secondItem="K5L-be-jEe" secondAttribute="bottom" id="jjM-iG-83n"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
-                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="pdX-G3-CzB"/>
+                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="pdX-G3-CzB"/>
                             <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="qRg-qq-6pf"/>
                         </constraints>
                     </view>
@@ -958,6 +967,7 @@ AAAAAAEGA
                         <outlet property="progressBar" destination="K5L-be-jEe" id="XDT-XA-WhH"/>
                         <outlet property="refreshButton" destination="yim-Dh-ib8" id="7pz-UP-YDw"/>
                         <outlet property="refreshed" destination="vpp-b5-zgs" id="fG6-H5-MQR"/>
+                        <outlet property="summaryLabel" destination="P1X-6o-9cj" id="lOt-cC-Wbp"/>
                         <outlet property="tempLabel" destination="mcD-fg-t0R" id="SUv-H2-Net"/>
                         <outlet property="weatherConditionLabel" destination="pc5-Ee-pRo" id="ybx-Sr-TTV"/>
                         <outlet property="weatherImage" destination="DST-cD-8hV" id="iZS-dQ-Ayt"/>

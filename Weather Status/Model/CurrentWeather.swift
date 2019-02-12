@@ -16,6 +16,9 @@ class CurrentWeather {
     fileprivate var _date: String!
     fileprivate var _weatherType: String!
     fileprivate var _currentTemp: String!
+    fileprivate var _currentSummary: String!
+    fileprivate var _hourlySummary: String!
+    
     
     var cityName: String{
         get{
@@ -53,16 +56,34 @@ class CurrentWeather {
             _currentTemp = newValue
         }
     }
+    var currentSummary: String{
+        get{
+            return _currentSummary ?? "--"
+        }
+        set {
+            _currentSummary = newValue
+        }
+    }
     
+    var hourlySummary: String{
+        get{
+            return _hourlySummary ?? "--"
+        }
+        set {
+            _hourlySummary = newValue
+        }
+    }
     
     class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather{
         
         let currentWeather = CurrentWeather()
         let swiftyJson = try! JSON(data: APIData)
         
-        currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
-        currentWeather.weatherType = swiftyJson["weather"][0]["main"].stringValue.capitalized
-        currentWeather.currentTemp = "\(swiftyJson["main"]["temp"].intValue)°"
+//        currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
+        currentWeather.weatherType = swiftyJson["currently"]["icon"].stringValue.capitalized
+        currentWeather.currentTemp = "\(swiftyJson["currently"]["temperature"].intValue)°"
+        currentWeather.currentSummary = swiftyJson["currently"]["summary"].stringValue
+        currentWeather.hourlySummary = swiftyJson["hourly"]["summary"].stringValue
         
         
         

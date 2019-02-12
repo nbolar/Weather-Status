@@ -10,9 +10,10 @@ import Cocoa
 import Alamofire
 import Foundation
 import CoreLocation
+import MapboxGeocoder
 
 
-
+let geocoder = Geocoder(accessToken: "pk.eyJ1IjoibmJvbGFyIiwiYSI6ImNqczBlZHN5NzAyN2wzeWt2b3lsN3g3MGgifQ.cFYFmlHIY3HxQnIwK6n6Eg")
 class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
@@ -28,6 +29,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @IBOutlet weak var celsius: NSButton!
     @IBOutlet weak var gestureImage: NSImageView!
     @IBOutlet weak var progressBar: RTProgressBar!
+    @IBOutlet weak var summaryLabel: NSTextField!
     
     var type:String!
     static let instance = WeatherVC()
@@ -88,12 +90,24 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if weather.currentTemp == "--"{
             type = ""
         }
+        if CLLocationManager.authorizationStatus() == .authorizedAlways
+        {
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            let options = ReverseGeocodeOptions(location: appDelegate.locationManager.location!)
+            _ = geocoder.geocode(options, completionHandler: { (placemarks, attribution, error) in
+                guard let placemark = placemarks?.first else {
+                    return
+                }
+                self.locationLabel.stringValue = "\(placemark.qualifiedName ?? "")"
+            })
+        }
+    
     
 
         dateLabel.stringValue = weather.date
-        locationLabel.stringValue = weather.cityName
+        summaryLabel.stringValue = "Rain starting later this afternoon, continuing until this evening."
         tempLabel.stringValue = "\(weather.currentTemp)\(type ?? "--")"
-        weatherConditionLabel.stringValue = weather.weatherType
+        weatherConditionLabel.stringValue = weather.currentSummary
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
         
         if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways
@@ -114,7 +128,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         
         units = 1
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
-//        appDelegate.downloadWeatherData()
+
         appDelegate.locationManager.startUpdatingLocation()
         updateUI()
         farenheit.isHidden = false
@@ -128,7 +142,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         
         units = 2
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
-//        appDelegate.downloadWeatherData()
+
         appDelegate.locationManager.startUpdatingLocation()
         updateUI()
         farenheit.isHidden = true
@@ -144,13 +158,14 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         refreshed.isHidden = false
         progressBar.color = NSColor.white
         progressBar.backgroundColor = NSColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
-//        progressBar.animationColor = NSColor.white
         progressBar.alphaValue = 1
         progressBar.progress = 0
         startProgressIteration()
         
         tempLabel.stringValue = "--"
         weatherConditionLabel.stringValue = "--"
+        locationLabel.stringValue = "--"
+        summaryLabel.stringValue = "--"
         
         if timerTest == nil {
             timerTest = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.wait), userInfo: nil, repeats: true)
