@@ -182,6 +182,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if refreshed.isHidden == false
         {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.locationManager.requestLocation()
             appDelegate.downloadWeatherData()
             refreshed.isHidden = true
             summaryLabel.isHidden = false

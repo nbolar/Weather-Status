@@ -40,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("1")
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             currentLocation = locations[locations.count - 1]
@@ -105,6 +106,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     @objc func downloadWeatherData(){
+        print("2")
 
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
