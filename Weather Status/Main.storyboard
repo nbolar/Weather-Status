@@ -1028,9 +1028,9 @@ AAAAAAEGA
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-ux-syT">
-                                <rect key="frame" x="2" y="10" width="217" height="25"/>
+                                <rect key="frame" x="38" y="10" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Powered by OpenWeatherMap" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
+                                <buttonCell key="cell" type="roundRect" title="Powered by Mapbox" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="15" name="AvenirNext-Regular"/>
                                 </buttonCell>

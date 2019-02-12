@@ -19,7 +19,7 @@ class Info: NSViewController {
     }
     
     @IBAction func openWeatherButtonClicked(_ sender: Any) {
-        let url = URL(string: "https://openweathermap.org")!
+        let url = URL(string: "https://www.mapbox.com")!
         NSWorkspace.shared.open(url)
         
     }
