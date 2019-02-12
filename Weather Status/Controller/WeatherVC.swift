@@ -105,7 +105,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
         dateLabel.stringValue = weather.date
-        summaryLabel.stringValue = "Rain starting later this afternoon, continuing until this evening."
+        summaryLabel.stringValue = weather.hourlySummary
         tempLabel.stringValue = "\(weather.currentTemp)\(type ?? "--")"
         weatherConditionLabel.stringValue = weather.currentSummary
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
@@ -165,7 +165,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         tempLabel.stringValue = "--"
         weatherConditionLabel.stringValue = "--"
         locationLabel.stringValue = "--"
-        summaryLabel.stringValue = "--"
+        summaryLabel.isHidden = true
         
         if timerTest == nil {
             timerTest = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.wait), userInfo: nil, repeats: true)
@@ -186,6 +186,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
             appDelegate.locationManager.startUpdatingLocation()
             refreshed.isHidden = true
+            summaryLabel.isHidden = false
             updateUI()
             
             if timerTest != nil {

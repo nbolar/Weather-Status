@@ -689,13 +689,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="71" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NrH-G2-yfC">
-                                <rect key="frame" x="20" y="199" width="340" height="171"/>
+                                <rect key="frame" x="20" y="191" width="340" height="169"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-u9-0ij">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="171"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="169"/>
                                         <subviews>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iwk-Qq-iG9">
-                                                <rect key="frame" x="24" y="146" width="93" height="25"/>
+                                                <rect key="frame" x="24" y="144" width="93" height="25"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="Today's Date" drawsBackground="YES" id="5Es-6s-Zki">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -703,7 +703,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-fg-t0R">
-                                                <rect key="frame" x="0.0" y="33" width="141" height="105"/>
+                                                <rect key="frame" x="0.0" y="31" width="141" height="105"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="100°" drawsBackground="YES" id="xKV-Gk-aEa">
                                                     <font key="font" size="64" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -711,9 +711,9 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-VD-Ck8">
-                                                <rect key="frame" x="10" y="0.0" width="121" height="25"/>
+                                                <rect key="frame" x="18" y="0.0" width="106" height="23"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="Portland, Oregan" drawsBackground="YES" id="143-gk-N4Z">
-                                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                                    <font key="font" size="13" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </textFieldCell>
@@ -731,7 +731,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="30" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yx0-8o-Daq">
-                                        <rect key="frame" x="212" y="5" width="128" height="162"/>
+                                        <rect key="frame" x="212" y="4" width="128" height="162"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DST-cD-8hV">
                                                 <rect key="frame" x="11" y="55" width="107" height="107"/>
@@ -739,7 +739,7 @@
                                                     <constraint firstAttribute="width" constant="107" id="Eey-6u-Dr4"/>
                                                     <constraint firstAttribute="height" constant="107" id="rTG-JL-v1r"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="clear" id="oim-Nx-ai8"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="oim-Nx-ai8"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Ee-pRo">
                                                 <rect key="frame" x="44" y="0.0" width="41" height="25"/>
@@ -773,7 +773,7 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-D8-kak">
-                                <rect key="frame" x="20" y="24" width="340" height="150"/>
+                                <rect key="frame" x="20" y="31" width="340" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="90t-2e-uw0">
                                     <rect key="frame" x="0.0" y="0.0" width="340" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -924,7 +924,7 @@ AAAAAAEGA
                                 </constraints>
                             </customView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-6o-9cj">
-                                <rect key="frame" x="18" y="169" width="364" height="45"/>
+                                <rect key="frame" x="34" y="348" width="313" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="Multiline Label" id="nkg-EF-g44">
                                     <font key="font" size="13" name="AvenirNext-Regular"/>
@@ -944,7 +944,7 @@ AAAAAAEGA
                             <constraint firstAttribute="trailing" secondItem="uOl-RJ-7JV" secondAttribute="trailing" constant="5" id="Iz1-22-kIM"/>
                             <constraint firstItem="K5L-be-jEe" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="L0F-Ya-gIr"/>
                             <constraint firstItem="yim-Dh-ib8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="RBJ-Ve-xIE"/>
-                            <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="25" id="Shh-gH-ais"/>
+                            <constraint firstItem="fwY-D8-kak" firstAttribute="top" secondItem="NrH-G2-yfC" secondAttribute="bottom" constant="10" id="Shh-gH-ais"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Sjz-1e-J0h"/>
                             <constraint firstItem="vpp-b5-zgs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-181" id="Y5f-i0-gfJ"/>
                             <constraint firstAttribute="bottom" secondItem="IG2-Bl-su9" secondAttribute="bottom" constant="8" id="Zsz-iU-2NY"/>
@@ -953,7 +953,7 @@ AAAAAAEGA
                             <constraint firstItem="NrH-G2-yfC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="iDq-jo-dAt"/>
                             <constraint firstAttribute="bottom" secondItem="K5L-be-jEe" secondAttribute="bottom" id="jjM-iG-83n"/>
                             <constraint firstItem="fwY-D8-kak" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="pXs-qH-dX2"/>
-                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="pdX-G3-CzB"/>
+                            <constraint firstItem="NrH-G2-yfC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="pdX-G3-CzB"/>
                             <constraint firstItem="IG2-Bl-su9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="qRg-qq-6pf"/>
                         </constraints>
                     </view>
@@ -1204,7 +1204,6 @@ AAAAAAEGA
     </scenes>
     <resources>
         <image name="celsius" width="32" height="32"/>
-        <image name="clear" width="512" height="512"/>
         <image name="cross_circle" width="100" height="100"/>
         <image name="farenheit" width="32" height="32"/>
         <image name="icon-29-information" width="32" height="32"/>
