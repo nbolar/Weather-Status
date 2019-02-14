@@ -3,73 +3,100 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230087413CED1BDD75C044157BE19F6A /* Pods-Weather Status-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFAF1EF5E97388AB89977730A52D106 /* Pods-Weather Status-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */; };
 		41401208D309176EDDED2E34B57D38A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		46C49671C37FB46E5FC0E498CDC3C68D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		57110B1CFE5A2EFF94CF75377489C474 /* MapboxGeocoder.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65D86F3284836F06BE475A0EC88C59AD /* MBPlacemarkScope.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DD6B6C5B45E6B7ED04D033D3308AA20 /* MBPlacemarkScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */; };
-		9F2F3D8ACFC9B2ED47E82E875443494E /* MBGeocodeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */; };
-		A46063D4405346DF995DD60A63565950 /* MBGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */; };
-		A4783CE9A4B7315211ACC4C730CA1AD1 /* MapboxGeocoder.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */; };
-		AED542A4A4CA8F6D14F468984A88A900 /* Pods-Weather Status-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */; };
-		D145F3C4B5ABDC27B225B62B528F7B72 /* MBPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */; };
-		D1EB73B8C850F2D40DD47D6EAA6A0D87 /* MBRectangularRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */; };
-		D24A4C5EB1C90D20718609E0CF666150 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */; };
-		DBA00FB1C71D8DFA8701CC74F598B1CB /* MapboxGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57110B1CFE5A2EFF94CF75377489C474 /* MapboxGeocoder.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DB2212CDBC46DAB0EA71B718B0484C /* MapboxGeocoder.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E15660BB1B71CD6DE808EB34E3DE0A3 /* Solar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9EF54CD70E9615545FBCC7BBCFAB4 /* Solar-dummy.m */; };
+		5E4F798BE429894A8ED3B06D466C37D7 /* Pods-Weather Status-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65D86F3284836F06BE475A0EC88C59AD /* MBPlacemarkScope.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC5AD2FBFD35C0AFC0BFF04E66832E7 /* MBPlacemarkScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CB27BE67361BA94B8DE138B1B0C8977 /* Solar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D84B6CCB1961F0226EFE7F16E9B6F6 /* Solar.swift */; };
+		7DD6B6C5B45E6B7ED04D033D3308AA20 /* MBPlacemarkScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BBB361EAE18911365A089FEA906C3 /* MBPlacemarkScope.swift */; };
+		9F2F3D8ACFC9B2ED47E82E875443494E /* MBGeocodeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5183B18227CAE42272390F00908B860 /* MBGeocodeOptions.swift */; };
+		A46063D4405346DF995DD60A63565950 /* MBGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3DFD5C3695304D0F001D4B3E785A8 /* MBGeocoder.swift */; };
+		A4783CE9A4B7315211ACC4C730CA1AD1 /* MapboxGeocoder.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF9A6058DC79A206C599C728A1989B /* MapboxGeocoder.swift-dummy.m */; };
+		BECBFA97E587D76381AA2B06F27494E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		D145F3C4B5ABDC27B225B62B528F7B72 /* MBPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2A93332FA59671FF6DF71B8BBB2B42 /* MBPlacemark.swift */; };
+		D1EB73B8C850F2D40DD47D6EAA6A0D87 /* MBRectangularRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A6D0CEB996ED55DF840BB370CF20F3 /* MBRectangularRegion.swift */; };
+		D24A4C5EB1C90D20718609E0CF666150 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07351DFA609C3C798BDE82BE9DC48BED /* CoreLocation.swift */; };
+		DBA00FB1C71D8DFA8701CC74F598B1CB /* MapboxGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B4683E9F8D3C11ACD17D158A17CCB44C /* MapboxGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74F2EED8CE21101F2FC2FD3CF1D415E /* Solar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AC6833234FB1673AEC10C703C181DD /* Solar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCF84949B0C6300B9772076B2CEC9799 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		409D489A5A0E6105EAA6153371C8E32B /* PBXContainerItemProxy */ = {
+		30C1DF939D9CEBE67A393D70FEE2F32D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 75591FE624CE3E082C1A82B78A2A7810;
 			remoteInfo = MapboxGeocoder.swift;
 		};
+		3B266BBA04A8577B926F9C51D8D27CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5069B70D36F8511C9EDF740F7FBFDE5;
+			remoteInfo = Solar;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocoder.swift; path = MapboxGeocoder/MBGeocoder.swift; sourceTree = "<group>"; };
-		0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxGeocoder.h; path = MapboxGeocoder/MapboxGeocoder.h; sourceTree = "<group>"; };
+		07351DFA609C3C798BDE82BE9DC48BED /* CoreLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = MapboxGeocoder/CoreLocation.swift; sourceTree = "<group>"; };
+		0FDF9A6058DC79A206C599C728A1989B /* MapboxGeocoder.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxGeocoder.swift-dummy.m"; sourceTree = "<group>"; };
 		13A30EA79EE09824F7B1CCDED107B628 /* Pods-Weather Status-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Weather Status-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBRectangularRegion.swift; path = MapboxGeocoder/MBRectangularRegion.swift; sourceTree = "<group>"; };
-		317C518117B4B5C29AD2C1B9F3E9C3F4 /* MapboxGeocoder.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxGeocoder.swift.modulemap; sourceTree = "<group>"; };
-		528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocodeOptions.swift; path = MapboxGeocoder/MBGeocodeOptions.swift; sourceTree = "<group>"; };
-		52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-umbrella.h"; sourceTree = "<group>"; };
-		53D1F8863635593AD317A87672D7964D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemark.swift; path = MapboxGeocoder/MBPlacemark.swift; sourceTree = "<group>"; };
+		22DB2212CDBC46DAB0EA71B718B0484C /* MapboxGeocoder.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-umbrella.h"; sourceTree = "<group>"; };
+		34D9EF54CD70E9615545FBCC7BBCFAB4 /* Solar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Solar-dummy.m"; sourceTree = "<group>"; };
+		45B735E0C2A3A5D6D81CC616F189852A /* Pods_Weather_Status.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Weather_Status.framework; path = "Pods-Weather Status.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE3DFD5C3695304D0F001D4B3E785A8 /* MBGeocoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocoder.swift; path = MapboxGeocoder/MBGeocoder.swift; sourceTree = "<group>"; };
+		54AC6833234FB1673AEC10C703C181DD /* Solar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Solar-umbrella.h"; sourceTree = "<group>"; };
+		5C5BBB361EAE18911365A089FEA906C3 /* MBPlacemarkScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemarkScope.swift; path = MapboxGeocoder/MBPlacemarkScope.swift; sourceTree = "<group>"; };
+		5F61EC5EAA9DCA6F75C1EA0925A5F76A /* Solar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Solar.framework; path = Solar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9661A9FD6A39045B0FDE7C5A02F8BF /* Pods-Weather Status-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Weather Status-umbrella.h"; sourceTree = "<group>"; };
-		7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemarkScope.swift; path = MapboxGeocoder/MBPlacemarkScope.swift; sourceTree = "<group>"; };
-		754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = MapboxGeocoder/CoreLocation.swift; sourceTree = "<group>"; };
-		8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxGeocoder.swift-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_Status.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapboxGeocoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A442E359D7E3912E7A50B4FC1C2F9653 /* MapboxGeocoder.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-prefix.pch"; sourceTree = "<group>"; };
+		7204011A3828E750EB1406E11B971DCD /* MapboxGeocoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxGeocoder.framework; path = MapboxGeocoder.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7660E19EF2BF6C349AE9DFB76AA804CA /* Solar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Solar-prefix.pch"; sourceTree = "<group>"; };
+		7BB1F56463118876B4567B66F2964872 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB44664A6182D7FBCA6B0CF126CE752 /* Solar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Solar.xcconfig; sourceTree = "<group>"; };
+		926DEFEC6FA0DC55C058FCFFD30FA988 /* MapboxGeocoder.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxGeocoder.swift-prefix.pch"; sourceTree = "<group>"; };
+		92D84B6CCB1961F0226EFE7F16E9B6F6 /* Solar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Solar.swift; path = Solar/Solar.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6A16E55D9420874EDC8FF1D16D6819B /* Pods-Weather Status-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Weather Status-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF3783F8D00442C1956CEA9892CC9C97 /* Solar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Solar.modulemap; sourceTree = "<group>"; };
 		B0DD4FF3F28EF843E3D2FAF11B9393B2 /* Pods-Weather Status-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weather Status-resources.sh"; sourceTree = "<group>"; };
+		B1A6D0CEB996ED55DF840BB370CF20F3 /* MBRectangularRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBRectangularRegion.swift; path = MapboxGeocoder/MBRectangularRegion.swift; sourceTree = "<group>"; };
+		B4683E9F8D3C11ACD17D158A17CCB44C /* MapboxGeocoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxGeocoder.h; path = MapboxGeocoder/MapboxGeocoder.h; sourceTree = "<group>"; };
 		B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weather Status.debug.xcconfig"; sourceTree = "<group>"; };
-		B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxGeocoder.swift.xcconfig; sourceTree = "<group>"; };
 		BC1EE62EE25F96A5454F6633368EB22D /* Pods-Weather Status.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Weather Status.modulemap"; sourceTree = "<group>"; };
 		C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weather Status.release.xcconfig"; sourceTree = "<group>"; };
+		C5183B18227CAE42272390F00908B860 /* MBGeocodeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBGeocodeOptions.swift; path = MapboxGeocoder/MBGeocodeOptions.swift; sourceTree = "<group>"; };
+		CB2E2904F888257DC439C8AB791406A4 /* MapboxGeocoder.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxGeocoder.swift.modulemap; sourceTree = "<group>"; };
 		CBB79203A33B7149DBBB44D8E2421FD9 /* Pods-Weather Status-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weather Status-frameworks.sh"; sourceTree = "<group>"; };
+		DE2A93332FA59671FF6DF71B8BBB2B42 /* MBPlacemark.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MBPlacemark.swift; path = MapboxGeocoder/MBPlacemark.swift; sourceTree = "<group>"; };
 		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E033D19FB05BB6384BEAE4B2AA4FA00F /* MapboxGeocoder.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxGeocoder.swift.xcconfig; sourceTree = "<group>"; };
 		E799BA2370CAEC6BEA8F60715530B6E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF415459E07DA2B509ED0652C4DECB47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F52A4498914E4E31E060469FFAE4C0A7 /* Pods-Weather Status-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Weather Status-dummy.m"; sourceTree = "<group>"; };
-		FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBPlacemarkScope.h; path = MapboxGeocoder/MBPlacemarkScope.h; sourceTree = "<group>"; };
+		FDC5AD2FBFD35C0AFC0BFF04E66832E7 /* MBPlacemarkScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBPlacemarkScope.h; path = MapboxGeocoder/MBPlacemarkScope.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BB5F187825A555C281BECC9207F4393 /* Frameworks */ = {
+		50C810FA6A75F86ECD5B8D36CC209B47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C49671C37FB46E5FC0E498CDC3C68D /* Cocoa.framework in Frameworks */,
+				FCF84949B0C6300B9772076B2CEC9799 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98F86260CEC202166E955A9C92A0CD3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECBFA97E587D76381AA2B06F27494E0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +129,16 @@
 			path = "Target Support Files/Pods-Weather Status";
 			sourceTree = "<group>";
 		};
+		345CEA055F52578C15E37965286D8008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7204011A3828E750EB1406E11B971DCD /* MapboxGeocoder.framework */,
+				45B735E0C2A3A5D6D81CC616F189852A /* Pods_Weather_Status.framework */,
+				5F61EC5EAA9DCA6F75C1EA0925A5F76A /* Solar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,37 +147,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3BA700C4E104C662DE4ACA56D7FAF8D7 /* MapboxGeocoder.swift */ = {
+		6F20D0123773E5957403ECCA2EFDE2D8 /* Solar */ = {
 			isa = PBXGroup;
 			children = (
-				754B0B57EB5C662A833E5579ED30BCC9 /* CoreLocation.swift */,
-				0C051BC3E1CDDE2AD7329594A314C9B2 /* MapboxGeocoder.h */,
-				528AE1798AACCA2851721D0B4D7A54D8 /* MBGeocodeOptions.swift */,
-				025FA9CD4319BA0D57BC5BE8796F5507 /* MBGeocoder.swift */,
-				5760BAABCE171706E7B4AD02B29C8831 /* MBPlacemark.swift */,
-				FB7F6D90781C90EDCABBFE132E94C824 /* MBPlacemarkScope.h */,
-				7322675C8EA593CBD4445D5611A11B91 /* MBPlacemarkScope.swift */,
-				2F3EF9B8A2C867EB367563FB30976EF5 /* MBRectangularRegion.swift */,
-				D9D1373976B2C8261844E73B43D72182 /* Support Files */,
+				92D84B6CCB1961F0226EFE7F16E9B6F6 /* Solar.swift */,
+				F0A8C40F779F90F91C696EC5FBB33263 /* Support Files */,
 			);
-			path = MapboxGeocoder.swift;
-			sourceTree = "<group>";
-		};
-		41D951D11C29B93415623647D2B0F6F6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3BA700C4E104C662DE4ACA56D7FAF8D7 /* MapboxGeocoder.swift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */,
-				9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */,
-			);
-			name = Products;
+			name = Solar;
+			path = Solar;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -148,8 +162,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				41D951D11C29B93415623647D2B0F6F6 /* Pods */,
-				4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */,
+				C6F34ADA4A3695EE396941D10F09283B /* Pods */,
+				345CEA055F52578C15E37965286D8008 /* Products */,
 				7F245DF56FCE974AF8EE6F39E5509BC7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -162,18 +176,58 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D9D1373976B2C8261844E73B43D72182 /* Support Files */ = {
+		9E47D71626BBF8C637CE712600145482 /* MapboxGeocoder.swift */ = {
 			isa = PBXGroup;
 			children = (
-				53D1F8863635593AD317A87672D7964D /* Info.plist */,
-				317C518117B4B5C29AD2C1B9F3E9C3F4 /* MapboxGeocoder.swift.modulemap */,
-				B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */,
-				8F26B188F0203DD59B8B8739B228A163 /* MapboxGeocoder.swift-dummy.m */,
-				A442E359D7E3912E7A50B4FC1C2F9653 /* MapboxGeocoder.swift-prefix.pch */,
-				52D75826ECAEB3D375F6B0CE5BBC8E80 /* MapboxGeocoder.swift-umbrella.h */,
+				07351DFA609C3C798BDE82BE9DC48BED /* CoreLocation.swift */,
+				B4683E9F8D3C11ACD17D158A17CCB44C /* MapboxGeocoder.h */,
+				C5183B18227CAE42272390F00908B860 /* MBGeocodeOptions.swift */,
+				4FE3DFD5C3695304D0F001D4B3E785A8 /* MBGeocoder.swift */,
+				DE2A93332FA59671FF6DF71B8BBB2B42 /* MBPlacemark.swift */,
+				FDC5AD2FBFD35C0AFC0BFF04E66832E7 /* MBPlacemarkScope.h */,
+				5C5BBB361EAE18911365A089FEA906C3 /* MBPlacemarkScope.swift */,
+				B1A6D0CEB996ED55DF840BB370CF20F3 /* MBRectangularRegion.swift */,
+				B3FBEE9641CEE6E00E3CF692585D2259 /* Support Files */,
+			);
+			name = MapboxGeocoder.swift;
+			path = MapboxGeocoder.swift;
+			sourceTree = "<group>";
+		};
+		B3FBEE9641CEE6E00E3CF692585D2259 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BB1F56463118876B4567B66F2964872 /* Info.plist */,
+				CB2E2904F888257DC439C8AB791406A4 /* MapboxGeocoder.swift.modulemap */,
+				E033D19FB05BB6384BEAE4B2AA4FA00F /* MapboxGeocoder.swift.xcconfig */,
+				0FDF9A6058DC79A206C599C728A1989B /* MapboxGeocoder.swift-dummy.m */,
+				926DEFEC6FA0DC55C058FCFFD30FA988 /* MapboxGeocoder.swift-prefix.pch */,
+				22DB2212CDBC46DAB0EA71B718B0484C /* MapboxGeocoder.swift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MapboxGeocoder.swift";
+			sourceTree = "<group>";
+		};
+		C6F34ADA4A3695EE396941D10F09283B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E47D71626BBF8C637CE712600145482 /* MapboxGeocoder.swift */,
+				6F20D0123773E5957403ECCA2EFDE2D8 /* Solar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0A8C40F779F90F91C696EC5FBB33263 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF415459E07DA2B509ED0652C4DECB47 /* Info.plist */,
+				AF3783F8D00442C1956CEA9892CC9C97 /* Solar.modulemap */,
+				8AB44664A6182D7FBCA6B0CF126CE752 /* Solar.xcconfig */,
+				34D9EF54CD70E9615545FBCC7BBCFAB4 /* Solar-dummy.m */,
+				7660E19EF2BF6C349AE9DFB76AA804CA /* Solar-prefix.pch */,
+				54AC6833234FB1673AEC10C703C181DD /* Solar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Solar";
 			sourceTree = "<group>";
 		};
 		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
@@ -187,11 +241,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3A0097462674F52339D368AB060CD723 /* Headers */ = {
+		25672E1E76F641F6DA3543E9373499AB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230087413CED1BDD75C044157BE19F6A /* Pods-Weather Status-umbrella.h in Headers */,
+				5E4F798BE429894A8ED3B06D466C37D7 /* Pods-Weather Status-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF065E8344950800C3C403538E65165 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74F2EED8CE21101F2FC2FD3CF1D415E /* Solar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,24 +270,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		356A3297D402E4DC8CDA5BCD86B61530 /* Pods-Weather Status */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B8FF63770794B66617BD6D3CC6ABFFA9 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */;
-			buildPhases = (
-				D6172EDEB21FEDC96B3D8798272E571F /* Sources */,
-				1BB5F187825A555C281BECC9207F4393 /* Frameworks */,
-				3A0097462674F52339D368AB060CD723 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28DF84B6578906738222D05E6D44EB69 /* PBXTargetDependency */,
-			);
-			name = "Pods-Weather Status";
-			productName = "Pods-Weather Status";
-			productReference = 9D291C010ED7A9C4498CFA5D5C87151E /* Pods_Weather_Status.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FC4693BC85A65A03A997989952001F8 /* Build configuration list for PBXNativeTarget "MapboxGeocoder.swift" */;
@@ -240,7 +284,43 @@
 			);
 			name = MapboxGeocoder.swift;
 			productName = MapboxGeocoder.swift;
-			productReference = A03E95DDB10A6A53E12859E690EB0EF6 /* MapboxGeocoder.framework */;
+			productReference = 7204011A3828E750EB1406E11B971DCD /* MapboxGeocoder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76B5ECC8F4AE075EF13F4F94321184D5 /* Pods-Weather Status */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB8B2E5A28F6D9E802ED80F0DB12725 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */;
+			buildPhases = (
+				EE7FC932E2C2A989D6F159F83971BC19 /* Sources */,
+				98F86260CEC202166E955A9C92A0CD3F /* Frameworks */,
+				25672E1E76F641F6DA3543E9373499AB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				403DD1B68D620F5F7EA508A42E8582B2 /* PBXTargetDependency */,
+				A12ED67D72788F98D317C2E1F7E79345 /* PBXTargetDependency */,
+			);
+			name = "Pods-Weather Status";
+			productName = "Pods-Weather Status";
+			productReference = 45B735E0C2A3A5D6D81CC616F189852A /* Pods_Weather_Status.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D5069B70D36F8511C9EDF740F7FBFDE5 /* Solar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A24FF21B8219040296E0F6DCBCDDCD3 /* Build configuration list for PBXNativeTarget "Solar" */;
+			buildPhases = (
+				BDE65DC2839B27A01F1C68438FDBD7D3 /* Sources */,
+				50C810FA6A75F86ECD5B8D36CC209B47 /* Frameworks */,
+				2CF065E8344950800C3C403538E65165 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Solar;
+			productName = Solar;
+			productReference = 5F61EC5EAA9DCA6F75C1EA0925A5F76A /* Solar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +330,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -260,12 +340,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4EE7A4F54E5C72AB1556C5F3960345F4 /* Products */;
+			productRefGroup = 345CEA055F52578C15E37965286D8008 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */,
-				356A3297D402E4DC8CDA5BCD86B61530 /* Pods-Weather Status */,
+				76B5ECC8F4AE075EF13F4F94321184D5 /* Pods-Weather Status */,
+				D5069B70D36F8511C9EDF740F7FBFDE5 /* Solar */,
 			);
 		};
 /* End PBXProject section */
@@ -285,26 +366,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6172EDEB21FEDC96B3D8798272E571F /* Sources */ = {
+		BDE65DC2839B27A01F1C68438FDBD7D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED542A4A4CA8F6D14F468984A88A900 /* Pods-Weather Status-dummy.m in Sources */,
+				5E15660BB1B71CD6DE808EB34E3DE0A3 /* Solar-dummy.m in Sources */,
+				7CB27BE67361BA94B8DE138B1B0C8977 /* Solar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7FC932E2C2A989D6F159F83971BC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFAF1EF5E97388AB89977730A52D106 /* Pods-Weather Status-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28DF84B6578906738222D05E6D44EB69 /* PBXTargetDependency */ = {
+		403DD1B68D620F5F7EA508A42E8582B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MapboxGeocoder.swift;
 			target = 75591FE624CE3E082C1A82B78A2A7810 /* MapboxGeocoder.swift */;
-			targetProxy = 409D489A5A0E6105EAA6153371C8E32B /* PBXContainerItemProxy */;
+			targetProxy = 30C1DF939D9CEBE67A393D70FEE2F32D /* PBXContainerItemProxy */;
+		};
+		A12ED67D72788F98D317C2E1F7E79345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Solar;
+			target = D5069B70D36F8511C9EDF740F7FBFDE5 /* Solar */;
+			targetProxy = 3B266BBA04A8577B926F9C51D8D27CBC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C0EF284826629E694882938C4E34710 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB44664A6182D7FBCA6B0CF126CE752 /* Solar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Solar/Solar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Solar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Solar/Solar.modulemap";
+				PRODUCT_MODULE_NAME = Solar;
+				PRODUCT_NAME = Solar;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1C319FE8FEF78C160E1BFEB270E25F16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,81 +492,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		339917DB174FBDD42AF117D825E3EA5C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		733276CB7E522D1DFE4049081356D9FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -502,7 +561,7 @@
 		};
 		8549D38A761BA89656858D2B19947A7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */;
+			baseConfigurationReference = E033D19FB05BB6384BEAE4B2AA4FA00F /* MapboxGeocoder.swift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -519,7 +578,11 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MapboxGeocoder.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift.modulemap";
 				PRODUCT_MODULE_NAME = MapboxGeocoder;
@@ -536,7 +599,7 @@
 		};
 		8F4B1AA671447E4770D8EA9FE49994D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B858F13C276EB378941D2E57BE643729 /* MapboxGeocoder.swift.xcconfig */;
+			baseConfigurationReference = E033D19FB05BB6384BEAE4B2AA4FA00F /* MapboxGeocoder.swift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -553,7 +616,11 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MapboxGeocoder.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/MapboxGeocoder.swift/MapboxGeocoder.swift.modulemap";
 				PRODUCT_MODULE_NAME = MapboxGeocoder;
@@ -568,9 +635,136 @@
 			};
 			name = Release;
 		};
+		A8B2BCEA42EB40EE30260E5B81D389CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C24450836FD9C91DDA46A3B1593C3ADB /* Pods-Weather Status.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA9CD701D3EE293911A94261558DD29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB44664A6182D7FBCA6B0CF126CE752 /* Solar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Solar/Solar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Solar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Solar/Solar.modulemap";
+				PRODUCT_MODULE_NAME = Solar;
+				PRODUCT_NAME = Solar;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EB320184D800622178E1BD6202B36380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81F9342783B43FE566CE543D13D8937 /* Pods-Weather Status.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Weather Status/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-Weather Status/Pods-Weather Status.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A24FF21B8219040296E0F6DCBCDDCD3 /* Build configuration list for PBXNativeTarget "Solar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0EF284826629E694882938C4E34710 /* Debug */,
+				DA9CD701D3EE293911A94261558DD29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -589,11 +783,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8FF63770794B66617BD6D3CC6ABFFA9 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */ = {
+		CDB8B2E5A28F6D9E802ED80F0DB12725 /* Build configuration list for PBXNativeTarget "Pods-Weather Status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				339917DB174FBDD42AF117D825E3EA5C /* Debug */,
-				733276CB7E522D1DFE4049081356D9FE /* Release */,
+				EB320184D800622178E1BD6202B36380 /* Debug */,
+				A8B2BCEA42EB40EE30260E5B81D389CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

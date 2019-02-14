@@ -31,8 +31,10 @@ class Info: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
+//        self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
         self.view.layer?.cornerRadius = 5
+        let image = NSImage(named: "wallpaper2")
+        self.view.layer?.contents = image
                 
     }
 

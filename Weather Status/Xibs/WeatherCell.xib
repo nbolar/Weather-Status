@@ -53,6 +53,15 @@
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-ag-CUU">
+                    <rect key="frame" x="51" y="4" width="28" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="HP0-zO-lJy">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="KNN-w7-DEa" secondAttribute="bottom" constant="4" id="4LY-tK-p1N"/>
@@ -66,8 +75,9 @@
             </constraints>
             <point key="canvasLocation" x="113" y="153"/>
         </customView>
-        <collectionViewItem id="eAh-dw-ClZ" customClass="WeatherCell" customModule="Weather_Status" customModuleProvider="target">
+        <collectionViewItem title="WeatherCell" nibName="WeatherCell" id="eAh-dw-ClZ" customClass="WeatherCell" customModule="Weather_Status" customModuleProvider="target">
             <connections>
+                <outlet property="anchorText" destination="uoF-ag-CUU" id="9qc-cc-6KA"/>
                 <outlet property="cellDate" destination="A3S-dE-6K8" id="cXL-NV-d6D"/>
                 <outlet property="highTemp" destination="KNN-w7-DEa" id="6E3-pv-LBh"/>
                 <outlet property="lowTemp" destination="Ev6-1E-0U3" id="WWK-JP-pq8"/>
@@ -76,6 +86,81 @@
                 <outlet property="weatherConditions" destination="4g7-Bd-02z" id="Ga7-3i-Zj9"/>
             </connections>
         </collectionViewItem>
+        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="e70-h6-xYx">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="8aX-wg-2NR">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JMv-tE-aa4">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <size key="minSize" width="240" height="135"/>
+                        <size key="maxSize" width="240" height="10000000"/>
+                        <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    </textView>
+                </subviews>
+            </clipView>
+            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hau-E5-lm5">
+                <rect key="frame" x="224" y="0.0" width="16" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <point key="canvasLocation" x="339" y="-66"/>
+        </scrollView>
+        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" id="K78-4R-gl6">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="13r-nv-f5X">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8Em-7W-3sP">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <size key="minSize" width="240" height="135"/>
+                        <size key="maxSize" width="240" height="10000000"/>
+                        <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    </textView>
+                </subviews>
+            </clipView>
+            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="xeP-B4-ILP">
+                <rect key="frame" x="224" y="0.0" width="16" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <point key="canvasLocation" x="139" y="399"/>
+        </scrollView>
+        <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="eFg-jm-g81">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <clipView key="contentView" id="Q1f-SU-b0z">
+                <rect key="frame" x="1" y="1" width="248" height="158"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <collectionView id="D9C-2h-eWH">
+                        <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="5yT-4y-E6U">
+                            <size key="itemSize" width="50" height="50"/>
+                        </collectionViewFlowLayout>
+                        <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </collectionView>
+                </subviews>
+            </clipView>
+            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="CzV-O6-bfz">
+                <rect key="frame" x="1" y="144" width="233" height="15"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WXf-Uw-E6B">
+                <rect key="frame" x="234" y="1" width="15" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <point key="canvasLocation" x="517" y="175"/>
+        </scrollView>
     </objects>
     <resources>
         <image name="clear-day" width="512" height="512"/>

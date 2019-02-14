@@ -11,12 +11,14 @@ import Alamofire
 import Foundation
 import CoreLocation
 import MapboxGeocoder
+import Solar
 
 
 let geocoder = Geocoder(accessToken: "pk.eyJ1IjoibmJvbGFyIiwiYSI6ImNqczBlZHN5NzAyN2wzeWt2b3lsN3g3MGgifQ.cFYFmlHIY3HxQnIwK6n6Eg")
 class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
+    
     @IBOutlet weak var dateLabel: NSTextField!
     @IBOutlet weak var tempLabel: NSTextField!
     @IBOutlet weak var locationLabel: NSTextField!
@@ -30,10 +32,23 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @IBOutlet weak var gestureImage: NSImageView!
     @IBOutlet weak var progressBar: RTProgressBar!
     @IBOutlet weak var summaryLabel: NSTextField!
+    @IBOutlet weak var highLabel: NSTextField!
+    @IBOutlet weak var lowLabel: NSTextField!
+    @IBOutlet weak var windImage: NSImageView!
+    @IBOutlet weak var windSpeed: NSTextField!
+    @IBOutlet weak var rainProb: NSTextField!
+    @IBOutlet weak var humidLabel: NSTextField!
+    @IBOutlet weak var feelsLikeLabel: NSTextField!
+    @IBOutlet weak var weekSummaryLabel: NSTextField!
+    @IBOutlet weak var sunsetLabel: NSTextField!
+    @IBOutlet weak var sunriseLabel: NSTextField!
     
     var type:String!
+    var speed:String!
     static let instance = WeatherVC()
     var timerTest : Timer?
+    var city : String!
+
     
     
     override func viewDidLoad() {
@@ -57,9 +72,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     override func viewDidAppear() {
         NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.dataDownloadedNotif(_:)), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
         self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
+
+
         check1 = 1
         updateUI()
     }
+    
     
     
     override func viewDidDisappear() {
@@ -74,38 +92,62 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
     
     func updateUI() {
+
         
         let weather = WeatherService.instance.currentWeather
         
         if fahrenheit == 1
         {
             type = "F"
+            speed = "mph"
         }
         if celsi == 1{
             type = "C"
+            speed = "kph"
         }
         if weather.currentTemp == "--"{
             type = ""
+            speed = ""
         }
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            
+            let solar = Solar(coordinate: (appDelegate.locationManager.location?.coordinate)!)
+            if (solar!.isNighttime){
+                let image = NSImage(named: "wallpaper7")
+                self.view.layer?.contents = image
+            } else if (solar!.isDaytime){
+                let image = NSImage(named: "wallpaper1")
+                self.view.layer?.contents = image
+            }
+            
             let options = ReverseGeocodeOptions(location: appDelegate.currentLocation)
             _ = geocoder.geocode(options, completionHandler: { (placemarks, attribution, error) in
                 guard let placemark = placemarks?.first else {
                     return
                 }
+                
                 self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "") \(placemark.postalAddress?.country ?? "")"
             })
         }
-    
-    
 
         dateLabel.stringValue = weather.date
         summaryLabel.stringValue = weather.hourlySummary
         tempLabel.stringValue = "\(weather.currentTemp)\(type ?? "--")"
         weatherConditionLabel.stringValue = weather.currentSummary
+        highLabel.stringValue = "High : \(weather.highLabel)\(type ?? "")"
+        lowLabel.stringValue = "Low : \(weather.lowLabel)\(type ?? "")"
         weatherImage.image = NSImage(named: weather.weatherType.lowercased())
+        windSpeed.stringValue = "\(weather.windSpeed) \(speed ?? "")"
+        rainProb.stringValue = "\(weather.rainProb)%"
+        humidLabel.stringValue = "Humidity : \(weather.humid)%"
+        feelsLikeLabel.stringValue = "Feels Like : \(weather.feels)\(type ?? "")"
+        weekSummaryLabel.stringValue = weather.weekSummary
+        sunriseLabel.stringValue = "\(weather.sunrise) AM"
+        sunsetLabel.stringValue = "\(weather.sunset) PM"
+        
+        
 
         
         if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways
@@ -133,6 +175,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         celsius.isHidden = true
         fahrenheit = 0
         celsi = 1
+        ForecastWeather.instance.downloadWeather()
         
         
     }
@@ -147,6 +190,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         celsius.isHidden = false
         celsi = 0
         fahrenheit = 1
+        ForecastWeather.instance.downloadWeather()
         
         
     }
@@ -163,7 +207,14 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         tempLabel.stringValue = "--"
         weatherConditionLabel.stringValue = "--"
         locationLabel.stringValue = "--"
+        highLabel.stringValue = "--"
+        lowLabel.stringValue = "--"
+        feelsLikeLabel.stringValue = "--"
+        humidLabel.stringValue = "--"
+        rainProb.stringValue = "--"
+        windSpeed.stringValue = "--"
         summaryLabel.isHidden = true
+        weekSummaryLabel.isHidden = true
         
         if timerTest == nil {
             timerTest = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.wait), userInfo: nil, repeats: true)
@@ -186,6 +237,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             appDelegate.downloadWeatherData()
             refreshed.isHidden = true
             summaryLabel.isHidden = false
+            weekSummaryLabel.isHidden = false
             updateUI()
             
             if timerTest != nil {
@@ -260,10 +312,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
 extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+        
         let forecastItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "WeatherCell"), for: indexPath)
         
         guard let forecastCell = forecastItem as? WeatherCell else { return forecastItem}
         forecastCell.configureCell(weatherCell: WeatherService.instance.forecast[indexPath.item])
+        
         
         return forecastCell
     }

@@ -18,6 +18,15 @@ class CurrentWeather {
     fileprivate var _currentTemp: String!
     fileprivate var _currentSummary: String!
     fileprivate var _hourlySummary: String!
+    fileprivate var _highLabel: String!
+    fileprivate var _lowLabel: String!
+    fileprivate var _windSpeed: String!
+    fileprivate var _rainProb: String!
+    fileprivate var _humid: String!
+    fileprivate var _feels: String!
+    fileprivate var _weekSummary: String!
+    fileprivate var _sunrise: String!
+    fileprivate var _sunset: String!
     
     
     var cityName: String{
@@ -74,16 +83,114 @@ class CurrentWeather {
         }
     }
     
+    var highLabel: String{
+        get{
+            return _highLabel ?? "--"
+        }
+        set {
+            _highLabel = newValue
+        }
+    }
+    
+    var lowLabel: String{
+        get{
+            return _lowLabel ?? "--"
+        }
+        set {
+            _lowLabel = newValue
+        }
+    }
+    
+    var windSpeed: String{
+        get{
+            return _windSpeed ?? "--"
+        }
+        set {
+            _windSpeed = newValue
+        }
+    }
+    
+    var rainProb: String{
+        get{
+            return _rainProb ?? "--"
+        }
+        set {
+            _rainProb = newValue
+        }
+    }
+    
+    var humid: String{
+        get{
+            return _humid ?? "--"
+        }
+        set {
+            _humid = newValue
+        }
+    }
+    
+    var feels: String{
+        get{
+            return _feels ?? "--"
+        }
+        set {
+            _feels = newValue
+        }
+    }
+    
+    var weekSummary: String{
+        get{
+            return _weekSummary ?? "--"
+        }
+        set {
+            _weekSummary = newValue
+        }
+    }
+    
+    var sunrise: String{
+        get{
+            return _sunrise ?? "--"
+        }
+        set {
+            _sunrise = newValue
+        }
+    }
+    
+    var sunset: String{
+        get{
+            return _sunset ?? "--"
+        }
+        set {
+            _sunset = newValue
+        }
+    }
+    
+    
     class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather{
         
         let currentWeather = CurrentWeather()
         let swiftyJson = try! JSON(data: APIData)
         
-//        currentWeather.cityName = swiftyJson["name"].stringValue.capitalized
+
         currentWeather.weatherType = swiftyJson["currently"]["icon"].stringValue.capitalized
-        currentWeather.currentTemp = "\(swiftyJson["currently"]["temperature"].intValue)°"
+        currentWeather.currentTemp = "\(Int(swiftyJson["currently"]["temperature"].doubleValue.rounded()))°"
         currentWeather.currentSummary = swiftyJson["currently"]["summary"].stringValue
         currentWeather.hourlySummary = swiftyJson["hourly"]["summary"].stringValue
+        currentWeather.highLabel = "\(Int(swiftyJson["daily"]["data"][0]["temperatureHigh"].doubleValue.rounded()))°"
+        currentWeather.lowLabel = "\(Int(swiftyJson["daily"]["data"][0]["temperatureLow"].doubleValue.rounded()))°"
+        currentWeather.windSpeed = "\(Int(swiftyJson["currently"]["windSpeed"].doubleValue.rounded()))"
+        currentWeather.rainProb = "\(Int(swiftyJson["currently"]["precipProbability"].doubleValue * 100))"
+        currentWeather.humid = "\(Int(swiftyJson["currently"]["humidity"].doubleValue * 100))"
+        currentWeather.feels = "\(Int(swiftyJson["currently"]["apparentTemperature"].doubleValue.rounded()))°"
+        currentWeather.weekSummary = swiftyJson["daily"]["summary"].stringValue
+        
+        let sunriseTime = swiftyJson["daily"]["data"][0]["sunriseTime"].doubleValue
+        let unixConvertedDateRise = Date(timeIntervalSince1970: sunriseTime)
+        currentWeather.sunrise = unixConvertedDateRise.timeOfTheDay()
+        
+        let sunsetTime = swiftyJson["daily"]["data"][0]["sunsetTime"].doubleValue
+        let unixConvertedDateSet = Date(timeIntervalSince1970: sunsetTime)
+        currentWeather.sunset = unixConvertedDateSet.timeOfTheDay()
+        
         
         
         
@@ -98,6 +205,7 @@ class CurrentWeather {
         return currentWeather
         
     }
+    
     
     
     

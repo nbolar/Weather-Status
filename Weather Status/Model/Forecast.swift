@@ -61,8 +61,8 @@ class Forecast {
             for day in list
             {
                 let dayForecast = Forecast()
-                dayForecast.highTemp = day["temperatureHigh"].intValue
-                dayForecast.lowTemp = day["temperatureLow"].intValue
+                dayForecast.highTemp = Int(day["temperatureHigh"].doubleValue.rounded())
+                dayForecast.lowTemp = Int(day["temperatureLow"].doubleValue.rounded())
                 dayForecast.weatherType = day["icon"].stringValue
                 
                 let date = day["time"].doubleValue

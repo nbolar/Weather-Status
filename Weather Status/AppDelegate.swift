@@ -8,6 +8,7 @@
 
 import Cocoa
 import CoreLocation
+import Solar
 
 
 @NSApplicationMain
@@ -40,13 +41,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("1")
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             currentLocation = locations[locations.count - 1]
             Location.instance.latitude = currentLocation.coordinate.latitude
             Location.instance.longitude = currentLocation.coordinate.longitude
             downloadWeatherData()
+            
         }
 
     }
@@ -82,8 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
     }
     
-    
-    
     func weatherInterval(interval : Int)
     {
         if CLLocationManager.authorizationStatus() == .authorizedAlways{
@@ -106,8 +105,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     @objc func downloadWeatherData(){
-        print("2")
-
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
             self.statusItem.button?.imagePosition = .imageLeft

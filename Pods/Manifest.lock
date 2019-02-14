@@ -1,16 +1,20 @@
 PODS:
   - MapboxGeocoder.swift (0.10.2)
+  - Solar (2.1.0)
 
 DEPENDENCIES:
   - MapboxGeocoder.swift (~> 0.10)
+  - Solar
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MapboxGeocoder.swift
+    - Solar
 
 SPEC CHECKSUMS:
   MapboxGeocoder.swift: 8cff5dddf98d87838509bf80a5bce5f1d0cf8393
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
 
-PODFILE CHECKSUM: dbcef711ffc11863c7391db6d7f73a5fe7cb4dfc
+PODFILE CHECKSUM: 53a30ed96b02b4f2c9d16fa2d6db87f3fd74e520
 
 COCOAPODS: 1.5.2
