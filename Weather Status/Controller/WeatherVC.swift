@@ -50,6 +50,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     var timerTest : Timer?
     var city : String!
     let monitor = NWPathMonitor()
+    var comma = ""
 
     
     
@@ -131,8 +132,12 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
                     guard let placemark = placemarks?.first else {
                         return
                     }
+                    if placemark.postalAddress?.city == nil
+                    {
+                        self.comma = ","
+                    }
                     
-                    self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "") \(placemark.postalAddress?.country ?? "")"
+                    self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "")\(self.comma) \(placemark.postalAddress?.country ?? "")"
                 })
                 
             }else if connected == 0{
