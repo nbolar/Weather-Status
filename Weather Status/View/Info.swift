@@ -11,6 +11,11 @@ import Foundation
 
 class Info: NSViewController {
     
+    @IBAction func unsplashClicked(_ sender: Any) {
+        
+        let url = URL(string: "https://unsplash.com/search/photos/gradient")!
+        NSWorkspace.shared.open(url)
+    }
     
     @IBAction func poweredByButtonClicked(_ sender: Any) {
         let url = URL(string: "https://darksky.net/poweredby/")!

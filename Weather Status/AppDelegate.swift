@@ -9,6 +9,7 @@
 import Cocoa
 import CoreLocation
 import Solar
+import Network
 
 
 @NSApplicationMain
@@ -18,6 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
+    var solar : Solar!
+    let monitor = NWPathMonitor()
     
  
 
@@ -25,10 +28,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         // Insert code here to initialize your application
         
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startMonitoringSignificantLocationChanges()
-        locationManager.distanceFilter = 1000
-        locationManager.startUpdatingLocation()
+
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("We're connected!")
+                connected = 1
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                self.locationManager.startMonitoringSignificantLocationChanges()
+                self.locationManager.distanceFilter = 1000
+                self.locationManager.startUpdatingLocation()
+            } else {
+                print("No connection.")
+                connected = 0
+            }
+            
+            print(path.isExpensive)
+        }
+        
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
         
         statusItem.button?.title = "--°"
         statusItem.button?.action = #selector(AppDelegate.displayPopUp(_:))
@@ -44,6 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             currentLocation = locations[locations.count - 1]
+            solar = Solar(coordinate: currentLocation.coordinate)
             Location.instance.latitude = currentLocation.coordinate.latitude
             Location.instance.longitude = currentLocation.coordinate.longitude
             downloadWeatherData()
@@ -105,6 +125,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     }
     
     @objc func downloadWeatherData(){
+        print("downloading")
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
             self.statusItem.button?.imagePosition = .imageLeft

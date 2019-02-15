@@ -19,6 +19,8 @@ class ForecastWeather: NSViewController, CLLocationManagerDelegate {
     @IBOutlet weak var sunsetLabel: NSTextField!
     @IBOutlet weak var precipProbLabel: NSTextField!
     @IBOutlet weak var windLabel: NSTextField!
+    @IBOutlet weak var humidLabel: NSTextField!
+    @IBOutlet weak var uvLabel: NSTextField!
     var speed : String!
     var url : URL!
     static let instance = ForecastWeather()
@@ -28,7 +30,7 @@ class ForecastWeather: NSViewController, CLLocationManagerDelegate {
         // Do view setup here.
         self.view.wantsLayer = true
 
-        self.view.layer?.cornerRadius = 15
+        self.view.layer?.cornerRadius = 8
         downloadWeather()
         updateUI()
     }
@@ -45,22 +47,35 @@ class ForecastWeather: NSViewController, CLLocationManagerDelegate {
             speed = "mph"
 
         }
-        
-        AF.request(url!).responseData { (response) in
-            let swiftyJson = try! JSON(data: response.data!)
-            self.forecastSummaryLabel?.stringValue = swiftyJson["daily"]["data"][index+1]["summary"].stringValue
-            self.precipProbLabel?.stringValue = "\(Int(swiftyJson["daily"]["data"][index+1]["precipProbability"].doubleValue * 100)) %"
-            self.windLabel?.stringValue = "\(Int(swiftyJson["daily"]["data"][index+1]["windSpeed"].doubleValue.rounded())) \(self.speed ?? "--")"
-            let sunriseTime = swiftyJson["daily"]["data"][index+1]["sunriseTime"].doubleValue
-            let unixConvertedDateRise = Date(timeIntervalSince1970: sunriseTime)
-            self.sunriseLabel?.stringValue = "\(unixConvertedDateRise.timeOfTheDay()) AM"
-
-
-            let sunsetTime = swiftyJson["daily"]["data"][index+1]["sunsetTime"].doubleValue
-            let unixConvertedDateSet = Date(timeIntervalSince1970: sunsetTime)
-            self.sunsetLabel?.stringValue = "\(unixConvertedDateSet.timeOfTheDay()) PM"
-
+        if connected == 1 {
+            
+            AF.request(url!).responseData { (response) in
+                let swiftyJson = try! JSON(data: response.data!)
+                self.forecastSummaryLabel?.stringValue = swiftyJson["daily"]["data"][index+1]["summary"].stringValue
+                self.precipProbLabel?.stringValue = "\(Int(swiftyJson["daily"]["data"][index+1]["precipProbability"].doubleValue * 100)) %"
+                self.windLabel?.stringValue = "\(Int(swiftyJson["daily"]["data"][index+1]["windSpeed"].doubleValue.rounded())) \(self.speed ?? "--")"
+                self.humidLabel?.stringValue = "Humidity : \(Int(swiftyJson["daily"]["data"][index+1]["humidity"].doubleValue * 100))%"
+                self.uvLabel?.stringValue = "UV Index : \(swiftyJson[""]["data"][index+1]["uvIndex"].intValue)"
+                
+                
+                let sunriseTime = swiftyJson["daily"]["data"][index+1]["sunriseTime"].doubleValue
+                let unixConvertedDateRise = Date(timeIntervalSince1970: sunriseTime)
+                self.sunriseLabel?.stringValue = "\(unixConvertedDateRise.timeOfTheDay()) AM"
+                let sunsetTime = swiftyJson["daily"]["data"][index+1]["sunsetTime"].doubleValue
+                let unixConvertedDateSet = Date(timeIntervalSince1970: sunsetTime)
+                self.sunsetLabel?.stringValue = "\(unixConvertedDateSet.timeOfTheDay()) PM"
+                
+            }
+        } else if connected == 0{
+            self.forecastSummaryLabel?.stringValue = "No Internet Connection"
+            self.precipProbLabel?.stringValue = "--"
+            self.windLabel?.stringValue = "--"
+            self.sunriseLabel?.stringValue = "--"
+            self.sunsetLabel?.stringValue = "--"
+            self.humidLabel?.stringValue = "--"
+            
         }
+        
         
         
     }
@@ -71,14 +86,17 @@ class ForecastWeather: NSViewController, CLLocationManagerDelegate {
         {
         
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            let solar = Solar(coordinate: (appDelegate.locationManager.location?.coordinate)!)
-            if (solar!.isNighttime){
-                let image = NSImage(named: "wallpaper7")
-                self.view.layer?.contents = image
-            } else if (solar!.isDaytime){
-                let image = NSImage(named: "wallpaper1")
-                self.view.layer?.contents = image
+            if connected == 1{
+                if (appDelegate.solar.isNighttime){
+                    let image = NSImage(named: "wallpaper7")
+                    self.view.layer?.contents = image
+                } else if (appDelegate.solar.isDaytime){
+                    let image = NSImage(named: "wallpaper1")
+                    self.view.layer?.contents = image
+                }
+                
             }
+
         }
     }
     

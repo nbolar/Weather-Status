@@ -739,7 +739,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="Dn2-WS-tyv"/>
                                                     <constraint firstAttribute="height" constant="100" id="nfZ-p4-jAb"/>
                                                 </constraints>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="clear-day" id="oim-Nx-ai8"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="oim-Nx-ai8"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Ee-pRo">
                                                 <rect key="frame" x="30" y="0.0" width="41" height="25"/>
@@ -1217,11 +1217,11 @@
             <objects>
                 <viewController title="Info" storyboardIdentifier="Info" id="CcI-zZ-HkC" customClass="Info" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="aTm-WH-8GS">
-                        <rect key="frame" x="0.0" y="0.0" width="220" height="237"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="260"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-HE-OC0">
-                                <rect key="frame" x="91" y="194" width="39" height="42"/>
+                                <rect key="frame" x="91" y="217" width="39" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="❤" drawsBackground="YES" id="1bk-6j-VFu">
                                     <font key="font" size="34" name="ZapfDingbatsITC"/>
@@ -1230,7 +1230,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-Ef-Bnc">
-                                <rect key="frame" x="0.0" y="115" width="220" height="50"/>
+                                <rect key="frame" x="0.0" y="138" width="220" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="Icons made by Freepik from www.flaticon.com" drawsBackground="YES" id="Xqm-Os-5Tr">
                                     <font key="font" size="15" name="AvenirNext-Regular"/>
@@ -1239,7 +1239,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnG-lx-avG">
-                                <rect key="frame" x="50" y="80" width="121" height="25"/>
+                                <rect key="frame" x="50" y="103" width="121" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="Glyphs by Icons8" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bLy-vP-9CT">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1251,9 +1251,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-ks-8T9">
-                                <rect key="frame" x="38" y="45" width="144" height="25"/>
+                                <rect key="frame" x="38" y="68" width="144" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Powered By DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
+                                <buttonCell key="cell" type="roundRect" title="Powered by DarkSky" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="b1H-Hg-EFL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="15" name="AvenirNext-Regular"/>
                                 </buttonCell>
@@ -1263,7 +1263,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-ux-syT">
-                                <rect key="frame" x="38" y="10" width="145" height="25"/>
+                                <rect key="frame" x="38" y="33" width="145" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="Powered by Mapbox" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="iqe-de-Lmy">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1272,6 +1272,18 @@
                                 <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="openWeatherButtonClicked:" target="CcI-zZ-HkC" id="vAP-gV-exa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnD-cB-8lZ">
+                                <rect key="frame" x="11" y="0.0" width="197" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Backgrounds from Unsplash" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="XZe-d0-mEK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" red="0.27123017179999998" green="1" blue="0.83111002720000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="unsplashClicked:" target="CcI-zZ-HkC" id="5af-NC-457"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1286,13 +1298,13 @@
             <objects>
                 <viewController title="ForecastWeather" storyboardIdentifier="ForecastWeather" id="3HA-Sk-pFq" customClass="ForecastWeather" customModule="Weather_Status" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="a5e-Zs-5dL">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Qtr-hc-aZ4">
-                                <rect key="frame" x="18" y="238" width="264" height="42"/>
+                                <rect key="frame" x="8" y="210" width="174" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="3TE-Cq-Iuw"/>
+                                    <constraint firstAttribute="height" constant="80" id="3TE-Cq-Iuw"/>
                                 </constraints>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="Multiline Label" id="5TI-tu-Y0x">
                                     <font key="font" size="13" name="AvenirNext-Regular"/>
@@ -1300,9 +1312,8 @@
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 </textFieldCell>
                             </textField>
-                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAO-aF-TDi">
-                                <rect key="frame" x="20" y="215.5" width="103" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAO-aF-TDi">
+                                <rect key="frame" x="49" y="185" width="103" height="25"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vK-RP-nIE">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
@@ -1314,12 +1325,12 @@
                                         <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eu0-cw-mOc">
-                                        <rect key="frame" x="51" y="4" width="54" height="17"/>
+                                        <rect key="frame" x="51" y="1" width="54" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="ejA-M9-2MO"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="q0e-XS-BOy">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Sunrise" id="q0e-XS-BOy">
+                                            <font key="font" size="13" name="AvenirNext-Regular"/>
                                             <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </textFieldCell>
@@ -1334,9 +1345,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yba-VX-7ST">
-                                <rect key="frame" x="20" y="176" width="103" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yba-VX-7ST">
+                                <rect key="frame" x="49" y="148" width="103" height="25"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D0M-zM-px5">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
@@ -1348,12 +1358,12 @@
                                         <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OcK-Gf-TMJ">
-                                        <rect key="frame" x="51" y="0.0" width="54" height="17"/>
+                                        <rect key="frame" x="51" y="0.0" width="54" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="J5k-ji-ZKI"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="u9A-zm-VL4">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Sunset" id="u9A-zm-VL4">
+                                            <font key="font" size="13" name="AvenirNext-Regular"/>
                                             <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </textFieldCell>
@@ -1368,9 +1378,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-H7-fCQ">
-                                <rect key="frame" x="20" y="137" width="103" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-H7-fCQ">
+                                <rect key="frame" x="49" y="111" width="103" height="25"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-4T-UJs">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
@@ -1382,12 +1391,12 @@
                                         <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-gz-QoA">
-                                        <rect key="frame" x="51" y="0.0" width="54" height="17"/>
+                                        <rect key="frame" x="51" y="0.0" width="54" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="h9I-V5-Wj3"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="9NR-DR-RoA">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Rain" id="9NR-DR-RoA">
+                                            <font key="font" size="13" name="AvenirNext-Regular"/>
                                             <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </textFieldCell>
@@ -1402,9 +1411,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLL-IR-GaJ">
-                                <rect key="frame" x="20" y="98" width="103" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLL-IR-GaJ">
+                                <rect key="frame" x="49" y="74" width="103" height="25"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ylq-tP-07R">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
@@ -1416,12 +1424,12 @@
                                         <color key="contentTintColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="78J-JG-jNR">
-                                        <rect key="frame" x="51" y="0.0" width="54" height="17"/>
+                                        <rect key="frame" x="51" y="0.0" width="54" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="I2s-cL-Y9F"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="kaz-bc-hNB">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Wind" id="kaz-bc-hNB">
+                                            <font key="font" size="13" name="AvenirNext-Regular"/>
                                             <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </textFieldCell>
@@ -1436,18 +1444,54 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MBH-5R-L7A">
+                                <rect key="frame" x="58" y="39" width="96" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="43D-o5-A7e"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Humidity" id="uR9-9i-JV9">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rpR-iE-5pm">
+                                <rect key="frame" x="58" y="4" width="84" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Kq3-OQ-myx"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="UV Index" id="Q6P-y4-t9v">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="mv3-H7-fCQ" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" id="2UJ-Oa-gON"/>
+                            <constraint firstItem="fAO-aF-TDi" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" id="8j3-jE-7gK"/>
+                            <constraint firstItem="WLL-IR-GaJ" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" id="AfZ-4a-zLH"/>
+                            <constraint firstItem="MBH-5R-L7A" firstAttribute="top" secondItem="WLL-IR-GaJ" secondAttribute="bottom" constant="12" id="CUz-7N-QeQ"/>
+                            <constraint firstItem="yba-VX-7ST" firstAttribute="top" secondItem="fAO-aF-TDi" secondAttribute="bottom" constant="12" id="JtA-I1-Nlt"/>
+                            <constraint firstItem="yba-VX-7ST" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" id="QEk-wj-CRd"/>
+                            <constraint firstItem="MBH-5R-L7A" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" constant="6" id="Qdw-VB-Zvc"/>
                             <constraint firstAttribute="trailing" secondItem="Qtr-hc-aZ4" secondAttribute="trailing" constant="20" id="UCB-NU-wN8"/>
-                            <constraint firstItem="Qtr-hc-aZ4" firstAttribute="leading" secondItem="a5e-Zs-5dL" secondAttribute="leading" constant="20" id="a9L-EY-HIz"/>
-                            <constraint firstItem="Qtr-hc-aZ4" firstAttribute="top" secondItem="a5e-Zs-5dL" secondAttribute="top" constant="20" id="s8M-Mg-tgG"/>
+                            <constraint firstItem="Qtr-hc-aZ4" firstAttribute="leading" secondItem="a5e-Zs-5dL" secondAttribute="leading" constant="10" id="a9L-EY-HIz"/>
+                            <constraint firstItem="rpR-iE-5pm" firstAttribute="centerX" secondItem="a5e-Zs-5dL" secondAttribute="centerX" id="au6-8k-Aio"/>
+                            <constraint firstItem="WLL-IR-GaJ" firstAttribute="top" secondItem="mv3-H7-fCQ" secondAttribute="bottom" constant="12" id="cgW-UI-1j9"/>
+                            <constraint firstItem="fAO-aF-TDi" firstAttribute="top" secondItem="a5e-Zs-5dL" secondAttribute="top" constant="90" id="ewS-LA-fWi"/>
+                            <constraint firstItem="mv3-H7-fCQ" firstAttribute="top" secondItem="yba-VX-7ST" secondAttribute="bottom" constant="12" id="iOF-7G-Q6H"/>
+                            <constraint firstItem="rpR-iE-5pm" firstAttribute="top" secondItem="MBH-5R-L7A" secondAttribute="bottom" constant="12" id="m6L-D3-N2E"/>
+                            <constraint firstItem="Qtr-hc-aZ4" firstAttribute="top" secondItem="a5e-Zs-5dL" secondAttribute="top" constant="10" id="s8M-Mg-tgG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="forecastSummaryLabel" destination="Qtr-hc-aZ4" id="YsQ-zV-P8v"/>
+                        <outlet property="humidLabel" destination="MBH-5R-L7A" id="w4S-Lb-CyB"/>
                         <outlet property="precipProbLabel" destination="yGJ-gz-QoA" id="C98-ke-wfO"/>
                         <outlet property="sunriseLabel" destination="eu0-cw-mOc" id="sZo-36-9m3"/>
                         <outlet property="sunsetLabel" destination="OcK-Gf-TMJ" id="33C-o0-YD3"/>
+                        <outlet property="uvLabel" destination="rpR-iE-5pm" id="xt4-M9-wfF"/>
                         <outlet property="windLabel" destination="78J-JG-jNR" id="uql-oA-QwD"/>
                     </connections>
                 </viewController>
@@ -1583,13 +1627,23 @@
                                     <segue destination="CcI-zZ-HkC" kind="modal" id="Wew-QW-Lsx"/>
                                 </connections>
                             </button>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-EM-LAA">
+                                <rect key="frame" x="7" y="227" width="116" height="18"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="No Internet Connection" id="kCI-80-eeq">
+                                    <font key="font" size="10" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="vd5-1r-20i" firstAttribute="centerX" secondItem="gLE-SL-9Dw" secondAttribute="centerX" id="8vD-Ke-VkZ"/>
                             <constraint firstItem="vd5-1r-20i" firstAttribute="top" secondItem="gLE-SL-9Dw" secondAttribute="top" constant="20" id="CA8-x5-zKM"/>
+                            <constraint firstItem="9q8-EM-LAA" firstAttribute="top" secondItem="gLE-SL-9Dw" secondAttribute="top" constant="5" id="Oim-eH-sam"/>
                             <constraint firstAttribute="bottom" secondItem="xiy-vb-mbR" secondAttribute="bottom" constant="3" id="bfr-Nu-rCO"/>
                             <constraint firstItem="H1n-Rv-GHT" firstAttribute="centerX" secondItem="gLE-SL-9Dw" secondAttribute="centerX" id="ikS-4g-HuW"/>
                             <constraint firstItem="H1n-Rv-GHT" firstAttribute="top" secondItem="gLE-SL-9Dw" secondAttribute="top" constant="5" id="lUg-pZ-i92"/>
+                            <constraint firstItem="9q8-EM-LAA" firstAttribute="centerX" secondItem="gLE-SL-9Dw" secondAttribute="centerX" id="rlP-e7-x2a"/>
                             <constraint firstAttribute="trailing" secondItem="xiy-vb-mbR" secondAttribute="trailing" constant="3" id="yBU-YI-0Fu"/>
                         </constraints>
                         <shadow key="shadow">
@@ -1599,6 +1653,7 @@
                     <connections>
                         <outlet property="fifteenMinutes" destination="BKV-06-xhQ" id="VX0-c3-09U"/>
                         <outlet property="fiveMinutes" destination="5qk-HT-tc6" id="fly-h2-bI3"/>
+                        <outlet property="internetLabel" destination="9q8-EM-LAA" id="70n-MD-5hY"/>
                         <outlet property="oneMinute" destination="wPp-Cw-bby" id="Hn3-Oq-hS7"/>
                         <outlet property="sixtyMinutes" destination="9BX-yD-4wD" id="i0x-wX-Ca4"/>
                         <outlet property="tenMinutes" destination="fDk-Ku-woz" id="sOa-Jc-mZL"/>
@@ -1613,7 +1668,6 @@
     </scenes>
     <resources>
         <image name="celsius" width="32" height="32"/>
-        <image name="clear-day" width="512" height="512"/>
         <image name="cross_circle" width="100" height="100"/>
         <image name="farenheit" width="32" height="32"/>
         <image name="icon-29-information" width="32" height="32"/>

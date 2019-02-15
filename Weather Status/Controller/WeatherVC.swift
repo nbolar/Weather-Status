@@ -12,6 +12,7 @@ import Foundation
 import CoreLocation
 import MapboxGeocoder
 import Solar
+import Network
 
 
 let geocoder = Geocoder(accessToken: "pk.eyJ1IjoibmJvbGFyIiwiYSI6ImNqczBlZHN5NzAyN2wzeWt2b3lsN3g3MGgifQ.cFYFmlHIY3HxQnIwK6n6Eg")
@@ -48,6 +49,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     static let instance = WeatherVC()
     var timerTest : Timer?
     var city : String!
+    let monitor = NWPathMonitor()
 
     
     
@@ -65,6 +67,8 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             farenheit.isHidden = true
             celsius.isHidden = false
         }
+        
+       
 
         // Do any additional setup after loading the view.
     }
@@ -72,7 +76,8 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     override func viewDidAppear() {
         NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.dataDownloadedNotif(_:)), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
         self.view.layer?.backgroundColor = CGColor.init(red: 0.39, green: 0.72, blue: 1.0, alpha: 0.9)
-
+        let image = NSImage(named: "wallpaper7")
+        self.view.layer?.contents = image
 
         check1 = 1
         updateUI()
@@ -112,24 +117,30 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedAlways
         {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            
-            let solar = Solar(coordinate: (appDelegate.locationManager.location?.coordinate)!)
-            if (solar!.isNighttime){
-                let image = NSImage(named: "wallpaper7")
-                self.view.layer?.contents = image
-            } else if (solar!.isDaytime){
-                let image = NSImage(named: "wallpaper1")
-                self.view.layer?.contents = image
-            }
-            
-            let options = ReverseGeocodeOptions(location: appDelegate.currentLocation)
-            _ = geocoder.geocode(options, completionHandler: { (placemarks, attribution, error) in
-                guard let placemark = placemarks?.first else {
-                    return
+            if connected == 1{
+                if (appDelegate.solar.isNighttime){
+                    let image = NSImage(named: "wallpaper7")
+                    self.view.layer?.contents = image
+                } else if (appDelegate.solar.isDaytime){
+                    let image = NSImage(named: "wallpaper1")
+                    self.view.layer?.contents = image
                 }
                 
-                self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "") \(placemark.postalAddress?.country ?? "")"
-            })
+                let options = ReverseGeocodeOptions(location: appDelegate.currentLocation)
+                _ = geocoder.geocode(options, completionHandler: { (placemarks, attribution, error) in
+                    guard let placemark = placemarks?.first else {
+                        return
+                    }
+                    
+                    self.locationLabel.stringValue = "\(placemark.formattedName), \(placemark.postalAddress?.city ?? "") \(placemark.postalAddress?.country ?? "")"
+                })
+                
+            }else if connected == 0{
+                weekSummaryLabel.stringValue = "No Internet Connection"
+                
+            }
+            
+            
         }
 
         dateLabel.stringValue = weather.date
@@ -143,14 +154,14 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         rainProb.stringValue = "\(weather.rainProb)%"
         humidLabel.stringValue = "Humidity : \(weather.humid)%"
         feelsLikeLabel.stringValue = "Feels Like : \(weather.feels)\(type ?? "")"
-        weekSummaryLabel.stringValue = weather.weekSummary
+        weekSummaryLabel.stringValue = "\(weather.weekSummary)"
         sunriseLabel.stringValue = "\(weather.sunrise) AM"
         sunsetLabel.stringValue = "\(weather.sunset) PM"
         
         
 
         
-        if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways
+        if check1 == 1 && check2 == 0 && CLLocationManager.authorizationStatus() == .authorizedAlways && connected == 1
         {
             check2 = 1
             gestureImage.isHidden = false
@@ -167,30 +178,44 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     @IBAction func celsiusButtonClicked(_ sender: Any) {
         
         units = 1
-        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        if connected == 1{
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.locationManager.requestLocation()
+            appDelegate.downloadWeatherData()
+            ForecastWeather.instance.downloadWeather()
+            farenheit.isHidden = false
+            celsius.isHidden = true
+            fahrenheit = 0
+            celsi = 1
+            
+        }else if connected == 0{
+            weekSummaryLabel.stringValue = "No Internet Connection"
 
-        appDelegate.downloadWeatherData()
-        updateUI()
-        farenheit.isHidden = false
-        celsius.isHidden = true
-        fahrenheit = 0
-        celsi = 1
-        ForecastWeather.instance.downloadWeather()
+        }
+
+        
         
         
     }
     @IBAction func farenheitButtonClciked(_ sender: Any) {
         
         units = 2
-        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        if connected == 1{
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.locationManager.requestLocation()
+            appDelegate.downloadWeatherData()
+            ForecastWeather.instance.downloadWeather()
+            farenheit.isHidden = true
+            celsius.isHidden = false
+            celsi = 0
+            fahrenheit = 1
+            
+        }else if connected == 0{
+            weekSummaryLabel.stringValue = "No Internet Connection"
 
-        appDelegate.downloadWeatherData()
-        updateUI()
-        farenheit.isHidden = true
-        celsius.isHidden = false
-        celsi = 0
-        fahrenheit = 1
-        ForecastWeather.instance.downloadWeather()
+        }
+
+        
         
         
     }
@@ -219,30 +244,46 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         if timerTest == nil {
             timerTest = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.wait), userInfo: nil, repeats: true)
         }
-
+    
         
-        Timer.scheduledTimer(timeInterval: 3.5, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(self.refreshBackground), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.dismissText), userInfo: nil, repeats: false)
     }
     
     @IBAction func quitButtonClicked(_ sender: Any) {
         NSApp.terminate(nil)
     }
     
-    @objc func dismissText(){
-        
-        if refreshed.isHidden == false
-        {
+    @objc func refreshBackground(){
+        if connected == 1{
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
             appDelegate.locationManager.requestLocation()
             appDelegate.downloadWeatherData()
+            //updateUI()
+            
+        } else if connected == 0{
+            weekSummaryLabel.stringValue = "No Internet Connection"
+            summaryLabel.stringValue = ""
+        }
+        
+        
+    }
+    
+    @objc func dismissText(){
+        let weather = WeatherService.instance.currentWeather
+        
+        if refreshed.isHidden == false
+        {
+        
             refreshed.isHidden = true
             summaryLabel.isHidden = false
             weekSummaryLabel.isHidden = false
-            updateUI()
             
             if timerTest != nil {
                 timerTest?.invalidate()
                 timerTest = nil
+                weatherImage.image = NSImage(named: weather.weatherType.lowercased())
+                
             }
             
         }
@@ -253,7 +294,14 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
     }
     
     @objc func wait(){
-        weatherImage.image = NSImage(named: "image\(Int.random(in: 1...11))")
+        if connected == 1{
+            weatherImage.image = NSImage(named: "image\(Int.random(in: 1...11))")
+        }else if connected == 0{
+            weatherImage.image = NSImage(named: "weathercock\(Int.random(in: 1...2))")
+        }
+        
+        
+        
     
     }
     

@@ -21,6 +21,7 @@ class Settings: NSViewController,CLLocationManagerDelegate {
     @IBOutlet weak var thirtyMinutes: NSButton!
     @IBOutlet weak var sixtyMinutes: NSButton!
     @IBOutlet weak var updatedLabel: NSTextField!
+    @IBOutlet weak var internetLabel: NSTextField!
     
     
     override func viewDidLoad() {
@@ -37,14 +38,21 @@ class Settings: NSViewController,CLLocationManagerDelegate {
     }
     
     @IBAction func buttonClicked(_ sender: NSButton){
-        updatedLabel.isHidden = false
+        
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         appDelegate.weatherInterval(interval: sender.tag)
         interval = sender.tag
         
+        if connected == 1 {
+            updatedLabel.isHidden = false
+        } else if connected == 0 {
+            internetLabel.isHidden = false
+        }
+
+        
         if CLLocationManager.authorizationStatus() == .authorizedAlways{
-            
-            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
+            if connected == 1{
+                Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
         }else if CLLocationManager.authorizationStatus() == .denied{
             
             Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(self.dismissLabel), userInfo: nil, repeats: false)
@@ -54,6 +62,7 @@ class Settings: NSViewController,CLLocationManagerDelegate {
         
         
         
+    }
     }
     @IBAction func infoButtonClicked(_ sender: Any) {
         self.dismiss(self)
@@ -68,7 +77,9 @@ class Settings: NSViewController,CLLocationManagerDelegate {
     
     @objc func dismissLabel()
     {
+        
         updatedLabel.isHidden = true
+        internetLabel.isHidden = true
         self.dismiss(self)
 
         
