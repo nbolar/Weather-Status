@@ -692,18 +692,21 @@
                                 <rect key="frame" x="20" y="332" width="340" height="176"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tY8-Tq-KCC">
-                                        <rect key="frame" x="0.0" y="7" width="141" height="163"/>
+                                        <rect key="frame" x="0.0" y="7" width="150" height="162"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D6G-Di-Zs0">
-                                                <rect key="frame" x="52" y="138" width="37" height="25"/>
+                                            <textField horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D6G-Di-Zs0">
+                                                <rect key="frame" x="58" y="138" width="35" height="24"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Date" id="6BU-p2-1uA">
-                                                    <font key="font" size="15" name="AvenirNext-Regular"/>
+                                                    <font key="font" size="14" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-fg-t0R">
-                                                <rect key="frame" x="0.0" y="29" width="141" height="105"/>
+                                                <rect key="frame" x="0.0" y="29" width="150" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="f5q-yI-nHd"/>
+                                                </constraints>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" focusRingType="none" alignment="justified" title="100°" drawsBackground="YES" id="xKV-Gk-aEa">
                                                     <font key="font" size="64" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -711,7 +714,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fzb-wn-RJd">
-                                                <rect key="frame" x="39" y="0.0" width="63" height="25"/>
+                                                <rect key="frame" x="44" y="0.0" width="63" height="25"/>
                                                 <textFieldCell key="cell" title="Location" id="XUt-ta-vyn">
                                                     <font key="font" size="15" name="AvenirNext-Regular"/>
                                                     <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

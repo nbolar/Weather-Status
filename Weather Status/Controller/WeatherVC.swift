@@ -190,12 +190,11 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             
         }else if connected == 0{
             weekSummaryLabel.stringValue = "No Internet Connection"
+            fahrenheit = 0
+            celsi = 1
 
         }
-
-        
-        
-        
+  
     }
     @IBAction func farenheitButtonClciked(_ sender: Any) {
         
@@ -212,6 +211,8 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             
         }else if connected == 0{
             weekSummaryLabel.stringValue = "No Internet Connection"
+            celsi = 0
+            fahrenheit = 1
 
         }
 
@@ -274,7 +275,6 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
         
         if refreshed.isHidden == false
         {
-        
             refreshed.isHidden = true
             summaryLabel.isHidden = false
             weekSummaryLabel.isHidden = false

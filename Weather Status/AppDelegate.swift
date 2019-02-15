@@ -32,18 +32,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
-                print("We're connected!")
                 connected = 1
                 self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
                 self.locationManager.startMonitoringSignificantLocationChanges()
                 self.locationManager.distanceFilter = 1000
                 self.locationManager.startUpdatingLocation()
             } else {
-                print("No connection.")
                 connected = 0
             }
-            
-            print(path.isExpensive)
         }
         
         let queue = DispatchQueue(label: "Monitor")
@@ -53,9 +49,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         statusItem.button?.action = #selector(AppDelegate.displayPopUp(_:))
         
         weatherInterval(interval: 15)
-        
-        
-
         
     }
     
@@ -105,27 +98,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     
     func weatherInterval(interval : Int)
     {
-        if CLLocationManager.authorizationStatus() == .authorizedAlways{
+        if CLLocationManager.authorizationStatus() == .authorizedAlways && connected == 1{
             let updateWeatherData = Timer.scheduledTimer(timeInterval: TimeInterval(60*interval), target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
             updateWeatherData.tolerance = 60
-            
-        }else{
-            
-            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.waitTime), userInfo: nil, repeats: false)
-
         }
-
-        
     }
     
-    @objc func waitTime(){
-
-        locationManager.startUpdatingLocation()
-        
-    }
     
     @objc func downloadWeatherData(){
-        print("downloading")
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.image = NSImage(named: "\(WeatherService.instance.currentWeather.weatherType.lowercased())_small")
             self.statusItem.button?.imagePosition = .imageLeft
