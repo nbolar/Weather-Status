@@ -24,6 +24,7 @@ var check1 = 0
 var check2 = 0
 var index = 0
 var connected = 0
+var launched = 0
 
 let API_KEY1 = "&appid=691657a05faabbd6ef5736fbcdcf951f" //OpenWeatherMap API Key
 let API_KEY2 = "47c545315eff2221c6346d3ee071083d" //DarkSky API Key

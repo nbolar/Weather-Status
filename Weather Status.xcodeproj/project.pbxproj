@@ -11,10 +11,8 @@
 		4E03AD37220D5E2F0094A018 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03AD36220D5E2F0094A018 /* Settings.swift */; };
 		4E1141E92215454C0064020C /* CustomScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1141E82215454C0064020C /* CustomScroller.swift */; };
 		4E1141EB22154B470064020C /* ForecastWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1141EA22154B470064020C /* ForecastWeather.swift */; };
-		4E165FF922099808002DEBB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E165FF822099808002DEBB4 /* Alamofire.framework */; };
 		4E165FFD22099A43002DEBB4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E165FFC22099A43002DEBB4 /* WeatherService.swift */; };
 		4E1660042209B707002DEBB4 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1660032209B707002DEBB4 /* CurrentWeather.swift */; };
-		4E1660062209BAD7002DEBB4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1660052209BAD7002DEBB4 /* SwiftyJSON.framework */; };
 		4E1660082209E51E002DEBB4 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1660072209E51E002DEBB4 /* Forecast.swift */; };
 		4E16600B2209E827002DEBB4 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E16600A2209E827002DEBB4 /* NSDate.swift */; };
 		4EA69A3B22097F00004F1AF3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */; };
@@ -34,10 +32,8 @@
 		4E03AD36220D5E2F0094A018 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4E1141E82215454C0064020C /* CustomScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScroller.swift; sourceTree = "<group>"; };
 		4E1141EA22154B470064020C /* ForecastWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeather.swift; sourceTree = "<group>"; };
-		4E165FF822099808002DEBB4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		4E165FFC22099A43002DEBB4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		4E1660032209B707002DEBB4 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		4E1660052209BAD7002DEBB4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
 		4E1660072209E51E002DEBB4 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		4E16600A2209E827002DEBB4 /* NSDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		4EA69A3A22097F00004F1AF3 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -49,10 +45,10 @@
 		4EB5B8EA220882680029104F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB5B8EE220882690029104F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB5B8F3220882690029104F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EB5B8F4220882690029104F /* Weather_Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weather_Status.entitlements; sourceTree = "<group>"; };
+		4ED47B0C221A84DC00478A5F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		4EDB4AFB220AB73D00420D5C /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		4EDB4B01220AD2FE00420D5C /* Weather Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Status.entitlements"; sourceTree = "<group>"; };
 		4EDB4B02220B119100420D5C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4EE7C194221BCAF3000ADBF5 /* Weather Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Status.entitlements"; sourceTree = "<group>"; };
 		4EE9E957221175B200142B06 /* RTProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTProgressBar.swift; sourceTree = "<group>"; };
 		C640E6D1FE9D87E5B6D44970 /* Pods_Weather_Status.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_Status.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D0EFA6D95BA0F2EC5044A0 /* Pods-Weather Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weather Status/Pods-Weather Status.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1660062209BAD7002DEBB4 /* SwiftyJSON.framework in Frameworks */,
-				4E165FF922099808002DEBB4 /* Alamofire.framework in Frameworks */,
 				39B1EA8409EA2D4AB6E5E123 /* Pods_Weather_Status.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				4EE9E957221175B200142B06 /* RTProgressBar.swift */,
-				4E1660052209BAD7002DEBB4 /* SwiftyJSON.framework */,
-				4E165FF822099808002DEBB4 /* Alamofire.framework */,
 				4EB5B8E9220882680029104F /* Weather Status */,
 				4EB5B8E8220882680029104F /* Products */,
 				D611B786483472C477FFADDA /* Pods */,
@@ -158,7 +150,7 @@
 		4EB5B8E9220882680029104F /* Weather Status */ = {
 			isa = PBXGroup;
 			children = (
-				4EDB4B01220AD2FE00420D5C /* Weather Status.entitlements */,
+				4EE7C194221BCAF3000ADBF5 /* Weather Status.entitlements */,
 				4E1660092209E813002DEBB4 /* Extension */,
 				4E1660022209B6EE002DEBB4 /* Model */,
 				4E1660002209B6C3002DEBB4 /* Controller */,
@@ -170,7 +162,6 @@
 				4EA69A4322098065004F1AF3 /* View */,
 				4EA69A3E22097FE5004F1AF3 /* Main.storyboard */,
 				4EB5B8F3220882690029104F /* Info.plist */,
-				4EB5B8F4220882690029104F /* Weather_Status.entitlements */,
 			);
 			path = "Weather Status";
 			sourceTree = "<group>";
@@ -187,6 +178,7 @@
 		D6E77D54033C67356E71AF28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ED47B0C221A84DC00478A5F /* ServiceManagement.framework */,
 				C640E6D1FE9D87E5B6D44970 /* Pods_Weather_Status.framework */,
 			);
 			name = Frameworks;
@@ -203,7 +195,6 @@
 				4EB5B8E3220882680029104F /* Sources */,
 				4EB5B8E4220882680029104F /* Frameworks */,
 				4EB5B8E5220882680029104F /* Resources */,
-				4E165FFA2209986A002DEBB4 /* ShellScript */,
 				D552480C1E6F57FD2946036C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -221,7 +212,7 @@
 		4EB5B8DF220882680029104F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Nikhil Bolar";
 				TargetAttributes = {
@@ -285,21 +276,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4E165FFA2209986A002DEBB4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/SwiftyJSON.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
 		D552480C1E6F57FD2946036C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,13 +283,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Weather Status/Pods-Weather Status-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MapboxGeocoder.swift/MapboxGeocoder.framework",
 				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxGeocoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,10 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = KALT4PNG4U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Weather Status/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,10 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = KALT4PNG4U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Weather Status/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

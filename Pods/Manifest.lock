@@ -1,20 +1,28 @@
 PODS:
+  - Alamofire (5.0.0-beta.2)
   - MapboxGeocoder.swift (0.10.2)
   - Solar (2.1.0)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.2)
   - MapboxGeocoder.swift (~> 0.10)
   - Solar
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - MapboxGeocoder.swift
     - Solar
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
   MapboxGeocoder.swift: 8cff5dddf98d87838509bf80a5bce5f1d0cf8393
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 53a30ed96b02b4f2c9d16fa2d6db87f3fd74e520
+PODFILE CHECKSUM: 49beb6491d6d9622dbc96ae977c55a21ba278c2d
 
 COCOAPODS: 1.5.2

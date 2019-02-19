@@ -48,25 +48,23 @@ class WeatherService {
                 completed()
             }
         }
-            else{
+        else{
+            
+            let url = URL(string: API_URL_CURRENT_WEATHER_us)
+
+            AF.request(url!).responseData { (response) in
                 
-                let url = URL(string: API_URL_CURRENT_WEATHER_us)
-                AF.request(url!).responseData { (response) in
-                    
-                    if response.data != nil
-                    {
-                        self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
-                    }
-                    
-                    
-                    completed()
+                if response.data != nil
+                {
+                    self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
+                }
+                
+                
+                completed()
             }
         }
-        
-            
-            
-            
-        }
+         
+    }
     
     
     func downloadForecast(completed: @escaping DownloadComplete) {

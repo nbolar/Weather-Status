@@ -13,6 +13,7 @@ import CoreLocation
 import MapboxGeocoder
 import Solar
 import Network
+//import LaunchAtLogin
 
 
 let geocoder = Geocoder(accessToken: "pk.eyJ1IjoibmJvbGFyIiwiYSI6ImNqczBlZHN5NzAyN2wzeWt2b3lsN3g3MGgifQ.cFYFmlHIY3HxQnIwK6n6Eg")
@@ -265,7 +266,7 @@ class WeatherVC: NSViewController,CLLocationManagerDelegate {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
             appDelegate.locationManager.requestLocation()
             appDelegate.downloadWeatherData()
-            //updateUI()
+            updateUI()
             
         } else if connected == 0{
             weekSummaryLabel.stringValue = "No Internet Connection"

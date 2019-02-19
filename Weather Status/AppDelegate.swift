@@ -10,6 +10,7 @@ import Cocoa
 import CoreLocation
 import Solar
 import Network
+//import LaunchAtLogin
 
 
 @NSApplicationMain
@@ -21,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     var currentLocation: CLLocation!
     var solar : Solar!
     let monitor = NWPathMonitor()
+    let notificationCenter = NSWorkspace.shared.notificationCenter
     
  
 
@@ -28,6 +30,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         // Insert code here to initialize your application
         
         locationManager.delegate = self
+        
+//        if launched == 0
+//        {
+//            dialogLaunch(question: "Would you like Weather Status to be launched at Login?", text: "The app will otherwise need to be manually enabled as a Login Item in System Preferences")
+//            launched = 1
+//        }
 
         
         monitor.pathUpdateHandler = { path in
@@ -37,6 +45,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
                 self.locationManager.startMonitoringSignificantLocationChanges()
                 self.locationManager.distanceFilter = 1000
                 self.locationManager.startUpdatingLocation()
+                self.notificationCenter.addObserver(self, selector: #selector(AppDelegate.wakeUpListener), name: NSWorkspace.didWakeNotification, object: nil)
+                
             } else {
                 connected = 0
             }
@@ -85,6 +95,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
 
     }
+    
+//    func dialogLaunch(question: String, text: String){
+//        let alert = NSAlert()
+//        alert.messageText = question
+//        alert.informativeText = text
+//        alert.alertStyle = .warning
+//        alert.addButton(withTitle: "No")
+//        alert.addButton(withTitle: "Yes")
+//        alert.buttons[1].target = self
+//        alert.buttons[1].action = #selector(launchSuccess)
+//        alert.runModal()
+//
+//    }
 
     @objc func openPrefs()
     {
@@ -95,6 +118,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
 
     }
+//    @objc func launchSuccess()
+//    {
+//        LaunchAtLogin.isEnabled = true
+//        NSApp.abortModal()
+//        
+//    }
+//    
+    
     
     func weatherInterval(interval : Int)
     {
@@ -126,6 +157,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         popoverView.contentViewController = vc
         popoverView.behavior = .transient
         popoverView.show(relativeTo: statusItem.button!.bounds, of: statusItem.button!, preferredEdge: .minY)
+        
+    }
+    
+    @objc func wakeUpListener(){
+        locationManager.startUpdatingLocation()
         
     }
 
