@@ -16,7 +16,7 @@ import Network
 //import LaunchAtLogin
 
 
-let geocoder = Geocoder(accessToken: "pk.eyJ1IjoibmJvbGFyIiwiYSI6ImNqczBlZHN5NzAyN2wzeWt2b3lsN3g3MGgifQ.cFYFmlHIY3HxQnIwK6n6Eg")
+let geocoder = Geocoder(accessToken: "YOURKEY")
 class WeatherVC: NSViewController,CLLocationManagerDelegate {
     
 
