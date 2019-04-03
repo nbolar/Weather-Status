@@ -1,4 +1,3 @@
-# Weather Status
 
 Weather Status is a simple and beautiful desktop app for macOS. It shows the current weather situation on the status bar and provides a more detailed version of the weather conditions of your current location once clicked.
 
