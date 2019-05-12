@@ -10,4 +10,7 @@ Weather Status is a simple and beautiful desktop app for macOS. It shows the cur
 
 Weather Status also provides a 7-day weather forecast which can be viewed by scrolling left on the tiles. Upon hovering the cursor on the image of the forecast, it shows a popup with more information about the weather on that day.
 
+
+You can grab the complete and most up to date version of it on the [App Store](https://itunes.apple.com/us/app/weather-status/id1453284596?mt=12).
+
 <img width="1440" alt="screenshot2" src="https://user-images.githubusercontent.com/45484873/55458775-957fb080-55f6-11e9-9d87-f57ab394ec5c.png">
