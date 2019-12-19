@@ -18,4 +18,4 @@ I've chosen to open source only a part of this app but you can grab the complete
 ----
 
 ### Note:
-The screenshot is from the App Store version 1.0.1. The current App Store version is 1.0.15. Much of the codebase has since changed and the version here doesn't accurately represent how the app currently works.
+The screenshot is from the App Store version 1.0.1. The current App Store version is 1.0.17. Much of the codebase has since changed and the version here doesn't accurately represent how the app currently works.
