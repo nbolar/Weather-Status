@@ -1,7 +1,7 @@
 # ![header](https://user-images.githubusercontent.com/45484873/55459720-d37dd400-55f8-11e9-9ccd-14f23c7125d5.png) 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
-[![Version: 1.0.19](https://img.shields.io/badge/App_Store-1.0.19-purple.svg)](https://opensource.org/licenses/MIT) 
+[![Version: 1.0.19](https://img.shields.io/badge/App_Store-1.0.19-purple.svg)](https://itunes.apple.com/us/app/weather-status/id1453284596?mt=12) 
 [![Platform](http://img.shields.io/badge/platform-macOS-black.svg?style=flat)](https://developer.apple.com/resources/)
 [![Platform](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](hhttps://swift.org/blog/swift-4-2-released/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/nbolar/weather-status/)
