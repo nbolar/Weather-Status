@@ -1,6 +1,7 @@
 # ![header](https://user-images.githubusercontent.com/45484873/55459720-d37dd400-55f8-11e9-9ccd-14f23c7125d5.png) 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+[![Version: 1.0.19](https://img.shields.io/badge/App_Store-1.0.19-purple.svg)](https://opensource.org/licenses/MIT) 
 [![Platform](http://img.shields.io/badge/platform-macOS-black.svg?style=flat)](https://developer.apple.com/resources/)
 [![Platform](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](hhttps://swift.org/blog/swift-4-2-released/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/nbolar/weather-status/)
@@ -18,4 +19,4 @@ I've chosen to open source only a part of this app but you can grab the complete
 ----
 
 ### Note:
-The screenshot is from the App Store version 1.0.1. The current App Store version is 1.0.17. Much of the codebase has since changed and the version here doesn't accurately represent how the app currently works.
+The screenshot is from the App Store version 1.0.1. The current App Store version is 1.0.19. Much of the codebase has since changed and the version here doesn't accurately represent how the app currently works.
