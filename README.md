@@ -6,6 +6,8 @@
 [![Platform](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](hhttps://swift.org/blog/swift-4-2-released/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/nbolar/weather-status/)
 
+### This Project is no longer being maintained due to unavailability of DarkSky's APIs.
+
 
 Weather Status is a simple and beautiful desktop app for macOS. It shows the current weather situation on the status bar and provides a more detailed version of the weather conditions of your current location once clicked.
 
